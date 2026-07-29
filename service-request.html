@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Request MosesTechFix support for computer repair, IT procurement, training, premium TIN and passport registration assistance, or website projects.">
+  <title>Service Request Form - MosesTechFix Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/pages.css">
+  <link rel="stylesheet" href="assets/tech-theme.css">
+  <link rel="stylesheet" href="assets/ai-pet.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html#home">
+          <img src="https://lh3.googleusercontent.com/d/1x_XWeK7qc1-51aVWrnvCkvHL3zLnnLbt" alt="MosesTechFix logo">
+          <span>MosesTechFix <small>IT services, training, and registration</small></span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#passport">TIN & Passport</a></li>
+          <li><a href="index.html#courses">Courses</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li class="nav-dropdown">
+            <button class="dropdown-toggle" type="button">More <i data-lucide="chevron-down" aria-hidden="true"></i></button>
+            <div class="dropdown-menu">
+              <a href="service-request.html">Service request</a>
+              <a href="equipment-recommendation.html">Equipment form</a>
+              <a href="gallery.html">Photo gallery</a>
+              <a href="it-procurement.html">IT procurement</a>
+              <a href="offers.html">Current offers</a>
+              <a href="service-area.html">Service area</a>
+              <a href="connect.html">WhatsApp and socials</a>
+              <a href="booking-guide.html">Booking guide</a>
+              <a href="index.html#contact">Contact</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow"><i data-lucide="clipboard-list" aria-hidden="true"></i> Service request</p>
+        <h1>Send an organized service request</h1>
+        <p class="lead">Choose the service you need and the form will prepare a clear WhatsApp message for MosesTechFix.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#request-form">
+            <i data-lucide="send" aria-hidden="true"></i>
+            Fill the form
+          </a>
+          <a class="button ghost" href="connect.html">
+            <i data-lucide="message-circle" aria-hidden="true"></i>
+            Use WhatsApp chooser
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="request-form">
+      <div class="container">
+        <div class="grid-2">
+          <article class="card">
+            <span class="icon"><i data-lucide="clipboard-check" aria-hidden="true"></i></span>
+            <h2>Service Request Form</h2>
+            <p>Use this for computer repair, procurement support, training, premium TIN and passport help, or website projects.</p>
+            <form class="request-form" data-whatsapp-form data-message-title="Service Request">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Full name</label>
+                  <input id="name" name="Full name" type="text" autocomplete="name" required>
+                </div>
+                <div class="field">
+                  <label for="phone">Phone or WhatsApp number</label>
+                  <input id="phone" name="Phone" type="tel" autocomplete="tel" required>
+                </div>
+                <div class="field">
+                  <label for="service">Service needed</label>
+                  <select id="service" name="Service needed" required>
+                    <option value="">Select a service</option>
+                    <option>Computer repair or support</option>
+                    <option>IT procurement support</option>
+                    <option>Training course</option>
+                    <option>Premium TIN or passport registration</option>
+                    <option>Website project</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="urgency">How urgent is it?</label>
+                  <select id="urgency" name="Urgency" required>
+                    <option value="">Select urgency</option>
+                    <option>Today</option>
+                    <option>This week</option>
+                    <option>This month</option>
+                    <option>Not urgent</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="location">Location or preferred mode</label>
+                  <input id="location" name="Location or mode" type="text" placeholder="Example: Nansana, Kampala, remote, on-site" required>
+                </div>
+                <div class="field">
+                  <label for="contact-time">Best time to contact you</label>
+                  <input id="contact-time" name="Best contact time" type="text" placeholder="Example: morning, afternoon, evening">
+                </div>
+                <div class="field full">
+                  <label for="details">Request details</label>
+                  <textarea id="details" name="Request details" placeholder="Briefly describe what you need, the device or service involved, and any deadline." required></textarea>
+                </div>
+              </div>
+              <p class="form-note">Submitting opens WhatsApp with your request. You can review and edit the message before sending.</p>
+              <div class="form-actions">
+                <button class="button primary" type="submit">
+                  <i data-lucide="message-circle" aria-hidden="true"></i>
+                  Send request on WhatsApp
+                </button>
+                <a class="button ghost" href="tel:+256708262179">
+                  <i data-lucide="phone" aria-hidden="true"></i>
+                  Call instead
+                </a>
+              </div>
+            </form>
+          </article>
+
+          <aside class="card notice">
+            <span class="icon gold"><i data-lucide="info" aria-hidden="true"></i></span>
+            <h2>What happens next?</h2>
+            <ul class="check-list">
+              <li><i data-lucide="check" aria-hidden="true"></i> Your details open as a ready WhatsApp message</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> MosesTechFix reviews the request and replies with next steps</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Any price or payment is confirmed before work starts</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Payments can be made to 0789 218 570 after confirmation</li>
+            </ul>
+            <a class="button ghost" href="booking-guide.html">
+              <i data-lucide="list-checks" aria-hidden="true"></i>
+              View booking guide
+            </a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>MosesTechFix Solutions</h3>
+          <p>Professional IT services, training, support, procurement guidance, and premium TIN and passport registration assistance in Uganda.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul class="footer-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="equipment-recommendation.html">Equipment form</a></li>
+            <li><a href="it-procurement.html">IT procurement</a></li>
+            <li><a href="connect.html">WhatsApp and socials</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-list">
+            <li><a href="tel:+256708262179">+256 708 262 179</a></li>
+            <li><a href="mailto:mosestechfixsolutions@gmail.com">mosestechfixsolutions@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 MosesTechFix Solutions. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    if (window.lucide) window.lucide.createIcons();
+
+    document.querySelectorAll("[data-whatsapp-form]").forEach((form) => {
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+
+        const title = form.dataset.messageTitle || "Website Request";
+        const lines = [`Hi MosesTechFix, I would like to submit a ${title}.`, ""];
+        new FormData(form).forEach((value, key) => {
+          const clean = String(value).trim();
+          if (clean) lines.push(`${key}: ${clean}`);
+        });
+        lines.push("", "Please guide me on the next step.");
+
+        const url = `https://wa.me/256708262179?text=${encodeURIComponent(lines.join("\\n"))}`;
+        window.open(url, "_blank", "noopener");
+      });
+    });
+  </script>
+  <script src="assets/ai-pet.js"></script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+.ai-pet {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  z-index: 940;
+  display: grid;
+  justify-items: center;
+  gap: 7px;
+  font-family: Manrope, system-ui, sans-serif;
+}
+
+@media (min-width: 781px) {
+  .ai-pet {
+    animation: ai-pet-wander 42s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+
+  .ai-pet:hover,
+  .ai-pet:focus-within {
+    animation-play-state: paused;
+  }
+}
+
+.ai-pet__hint {
+  max-width: 170px;
+  padding: 8px 12px;
+  border: 1px solid rgba(7, 59, 87, 0.14);
+  border-radius: 14px 14px 14px 4px;
+  color: #073b57;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(16, 24, 40, 0.16);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.25;
+  text-align: center;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.ai-pet__button {
+  position: relative;
+  width: 78px;
+  height: 82px;
+  padding: 0;
+  border: 2px solid rgba(255, 255, 255, 0.78);
+  border-radius: 28px 28px 24px 24px;
+  color: #fff;
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.18), transparent 42%),
+    linear-gradient(145deg, #10a5ae, #073b57);
+  box-shadow: 0 14px 34px rgba(7, 59, 87, 0.3);
+  cursor: pointer;
+  animation: ai-pet-float 3.2s ease-in-out infinite;
+}
+
+.ai-pet__button::before,
+.ai-pet__button::after {
+  position: absolute;
+  top: 31px;
+  width: 9px;
+  height: 22px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  background: #0b7184;
+  content: "";
+}
+
+.ai-pet__button::before {
+  left: -8px;
+  border-radius: 8px 2px 2px 8px;
+}
+
+.ai-pet__button::after {
+  right: -8px;
+  border-radius: 2px 8px 8px 2px;
+}
+
+.ai-pet__button:hover,
+.ai-pet__button:focus-visible {
+  transform: translateY(-3px) scale(1.04);
+  outline: 3px solid rgba(11, 143, 156, 0.26);
+  outline-offset: 3px;
+}
+
+.ai-pet__antenna {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  width: 3px;
+  height: 11px;
+  border-radius: 3px;
+  background: #9be5dd;
+  transform: translateX(-50%);
+}
+
+.ai-pet__antenna::before {
+  position: absolute;
+  top: -4px;
+  left: -3px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #f4c34b;
+  content: "";
+  box-shadow: 0 0 0 4px rgba(244, 195, 75, 0.16);
+}
+
+.ai-pet__face {
+  position: absolute;
+  inset: 20px 10px 14px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.82);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: inset 0 0 0 3px rgba(11, 143, 156, 0.1);
+}
+
+.ai-pet__logo {
+  width: 46px;
+  height: 46px;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.ai-pet__feet {
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 46px;
+  height: 9px;
+  border-radius: 0 0 12px 12px;
+  background:
+    linear-gradient(90deg, #073b57 0 34%, transparent 34% 66%, #073b57 66% 100%);
+  transform: translateX(-50%);
+}
+
+.ai-pet-dialog[hidden] {
+  display: none;
+}
+
+.ai-pet-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 1000000;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(5, 18, 30, 0.68);
+  backdrop-filter: blur(6px);
+}
+
+.ai-pet-dialog__panel {
+  width: min(980px, 100%);
+  height: min(820px, calc(100vh - 36px));
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.34);
+}
+
+.ai-pet-dialog__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 16px;
+  color: #fff;
+  background: linear-gradient(110deg, #073b57, #0b8f9c);
+}
+
+.ai-pet-dialog__title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.ai-pet-dialog__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ai-pet-dialog__link,
+.ai-pet-dialog__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ai-pet-dialog__close {
+  width: 38px;
+  padding: 0;
+  font-size: 24px;
+}
+
+.ai-pet-dialog__link:hover,
+.ai-pet-dialog__close:hover,
+.ai-pet-dialog__link:focus-visible,
+.ai-pet-dialog__close:focus-visible {
+  background: rgba(255, 255, 255, 0.2);
+  outline: 2px solid #fff;
+  outline-offset: 1px;
+}
+
+.ai-pet-dialog__frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #eef4f8;
+}
+
+@keyframes ai-pet-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes ai-pet-wander {
+  0%,
+  12% {
+    transform: translateX(0);
+  }
+  88%,
+  100% {
+    transform: translateX(calc(100vw - 235px));
+  }
+}
+
+@media (max-width: 640px) {
+  .ai-pet {
+    left: 12px;
+    bottom: 12px;
+  }
+
+  .ai-pet__button {
+    width: 66px;
+    height: 70px;
+    border-radius: 23px 23px 20px 20px;
+  }
+
+  .ai-pet__face {
+    inset: 18px 8px 12px;
+  }
+
+  .ai-pet__logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .ai-pet__hint {
+    max-width: 145px;
+    font-size: 11px;
+  }
+
+  .ai-pet-dialog {
+    padding: 0;
+  }
+
+  .ai-pet-dialog__panel {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .ai-pet-dialog__link {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-pet,
+  .ai-pet__button {
+    animation: none;
+  }
+}

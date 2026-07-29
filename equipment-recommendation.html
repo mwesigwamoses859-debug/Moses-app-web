@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Request IT equipment recommendations from MosesTechFix based on your budget, use case, device type, software needs, and location.">
+  <title>IT Equipment Recommendation Form - MosesTechFix Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/pages.css">
+  <link rel="stylesheet" href="assets/tech-theme.css">
+  <link rel="stylesheet" href="assets/ai-pet.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html#home">
+          <img src="https://lh3.googleusercontent.com/d/1x_XWeK7qc1-51aVWrnvCkvHL3zLnnLbt" alt="MosesTechFix logo">
+          <span>MosesTechFix <small>IT services, training, and registration</small></span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#passport">TIN & Passport</a></li>
+          <li><a href="index.html#courses">Courses</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li class="nav-dropdown">
+            <button class="dropdown-toggle" type="button">More <i data-lucide="chevron-down" aria-hidden="true"></i></button>
+            <div class="dropdown-menu">
+              <a href="service-request.html">Service request</a>
+              <a href="equipment-recommendation.html">Equipment form</a>
+              <a href="gallery.html">Photo gallery</a>
+              <a href="it-procurement.html">IT procurement</a>
+              <a href="offers.html">Current offers</a>
+              <a href="service-area.html">Service area</a>
+              <a href="connect.html">WhatsApp and socials</a>
+              <a href="booking-guide.html">Booking guide</a>
+              <a href="index.html#contact">Contact</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow"><i data-lucide="shopping-cart" aria-hidden="true"></i> Equipment recommendation</p>
+        <h1>Tell us what you need before buying equipment</h1>
+        <p class="lead">Share your budget, use case, preferred device type, software needs, and location so MosesTechFix can recommend suitable IT equipment.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#equipment-form">
+            <i data-lucide="clipboard-check" aria-hidden="true"></i>
+            Fill equipment form
+          </a>
+          <a class="button ghost" href="it-procurement.html">
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+            Read procurement service
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="equipment-form">
+      <div class="container">
+        <div class="grid-2">
+          <article class="card">
+            <span class="icon green"><i data-lucide="laptop" aria-hidden="true"></i></span>
+            <h2>IT Equipment Recommendation Form</h2>
+            <p>This form is for laptop, desktop, workstation, and office IT equipment recommendations.</p>
+            <form class="request-form" data-whatsapp-form data-message-title="IT Equipment Recommendation Request">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Full name</label>
+                  <input id="name" name="Full name" type="text" autocomplete="name" required>
+                </div>
+                <div class="field">
+                  <label for="phone">Phone or WhatsApp number</label>
+                  <input id="phone" name="Phone" type="tel" autocomplete="tel" required>
+                </div>
+                <div class="field">
+                  <label for="budget">Budget range</label>
+                  <input id="budget" name="Budget range" type="text" placeholder="Example: UGX 800,000 - 1,500,000" required>
+                </div>
+                <div class="field">
+                  <label for="device">Preferred device type</label>
+                  <select id="device" name="Preferred device type" required>
+                    <option value="">Select device type</option>
+                    <option>Laptop</option>
+                    <option>Desktop</option>
+                    <option>Workstation</option>
+                    <option>Office IT equipment</option>
+                    <option>Not sure yet</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="use-case">Main use case</label>
+                  <select id="use-case" name="Main use case" required>
+                    <option value="">Select main use</option>
+                    <option>Office work</option>
+                    <option>Student or school work</option>
+                    <option>Software development</option>
+                    <option>Graphic design</option>
+                    <option>Video editing or multimedia</option>
+                    <option>Business operations</option>
+                    <option>General home use</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="condition">Preferred condition</label>
+                  <select id="condition" name="Preferred condition">
+                    <option>Open to good recommendation</option>
+                    <option>Brand new only</option>
+                    <option>Good used device</option>
+                    <option>Refurbished device</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="location">Location</label>
+                  <input id="location" name="Location" type="text" placeholder="Example: Nansana, Kampala" required>
+                </div>
+                <div class="field">
+                  <label for="timeline">When do you need it?</label>
+                  <select id="timeline" name="Timeline" required>
+                    <option value="">Select timeline</option>
+                    <option>Immediately</option>
+                    <option>This week</option>
+                    <option>This month</option>
+                    <option>Still planning</option>
+                  </select>
+                </div>
+                <div class="field full">
+                  <label for="software">Software or tasks you need to run</label>
+                  <textarea id="software" name="Software or tasks" placeholder="Example: Microsoft Office, AutoCAD, Adobe Photoshop, coding tools, accounting software, video editing apps." required></textarea>
+                </div>
+                <div class="field full">
+                  <label for="notes">Extra notes</label>
+                  <textarea id="notes" name="Extra notes" placeholder="Mention screen size, battery needs, portability, storage, accessories, or any brand preference."></textarea>
+                </div>
+              </div>
+              <p class="form-note">Submitting opens WhatsApp with your equipment request. You can review and edit before sending.</p>
+              <div class="form-actions">
+                <button class="button primary" type="submit">
+                  <i data-lucide="message-circle" aria-hidden="true"></i>
+                  Request recommendation
+                </button>
+                <a class="button ghost" href="service-request.html">
+                  <i data-lucide="clipboard-list" aria-hidden="true"></i>
+                  General service form
+                </a>
+              </div>
+            </form>
+          </article>
+
+          <aside class="card notice">
+            <span class="icon gold"><i data-lucide="cpu" aria-hidden="true"></i></span>
+            <h2>Why this helps</h2>
+            <p>The right recommendation depends on the real work the equipment must handle. A budget alone is not enough.</p>
+            <ul class="check-list">
+              <li><i data-lucide="check" aria-hidden="true"></i> Office work needs reliable battery, storage, and Office apps</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Design and video work need stronger graphics and memory</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Software development needs processor, RAM, storage, and screen comfort</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Business teams may need accessories, backup, security, and setup support</li>
+            </ul>
+            <a class="button ghost" href="it-procurement.html">
+              <i data-lucide="shopping-cart" aria-hidden="true"></i>
+              Learn about procurement
+            </a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>MosesTechFix Solutions</h3>
+          <p>Professional IT services, training, support, procurement guidance, and premium TIN and passport registration assistance in Uganda.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul class="footer-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service-request.html">Service request</a></li>
+            <li><a href="it-procurement.html">IT procurement</a></li>
+            <li><a href="connect.html">WhatsApp and socials</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-list">
+            <li><a href="tel:+256708262179">+256 708 262 179</a></li>
+            <li><a href="mailto:mosestechfixsolutions@gmail.com">mosestechfixsolutions@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 MosesTechFix Solutions. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    if (window.lucide) window.lucide.createIcons();
+
+    document.querySelectorAll("[data-whatsapp-form]").forEach((form) => {
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+
+        const title = form.dataset.messageTitle || "Website Request";
+        const lines = [`Hi MosesTechFix, I would like to submit a ${title}.`, ""];
+        new FormData(form).forEach((value, key) => {
+          const clean = String(value).trim();
+          if (clean) lines.push(`${key}: ${clean}`);
+        });
+        lines.push("", "Please recommend suitable equipment and guide me on the next step.");
+
+        const url = `https://wa.me/256708262179?text=${encodeURIComponent(lines.join("\\n"))}`;
+        window.open(url, "_blank", "noopener");
+      });
+    });
+  </script>
+  <script src="assets/ai-pet.js"></script>
+</body>
+</html>
