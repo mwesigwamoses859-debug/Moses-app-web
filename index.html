@@ -35,7 +35,7 @@
       },
       "description": "Practical IT services, computer support, training, and procurement guidance in Kampala, Uganda",
       "url": "https://mosestechfixsolution.com/",
-      "logo": "https://mosestechfixsolution.com/assets/mosestechfix-robot-logo.jpg",
+      "logo": "https://mosestechfixsolution.com/assets/mosestechfix-logo-v2.png",
       "image": "https://mosestechfixsolution.com/assets/images/mosestechfix-hero-v2.png",
       "telephone": "+256708262179",
       "email": "mosestechfixsolutions@gmail.com",
@@ -1441,7 +1441,7 @@
     <div class="container">
       <nav class="nav" aria-label="Main navigation">
         <a class="brand" href="#home" aria-label="MosesTechFix home">
-          <img src="https://lh3.googleusercontent.com/d/1x_XWeK7qc1-51aVWrnvCkvHL3zLnnLbt" alt="MosesTechFix logo">
+          <img src="assets/mosestechfix-logo-v2.png" alt="MosesTechFix Solutions logo">
           <span>
             MosesTechFix
             <small>IT services, training, and registration</small>
@@ -1570,6 +1570,11 @@
             <span class="icon"><i data-lucide="shopping-cart" aria-hidden="true"></i></span>
             <strong>IT procurement</strong>
             <p>Equipment recommendations based on performance, budget, and usage.</p>
+          </a>
+          <a class="quick-card" href="website-development.html" data-animate>
+            <span class="icon coral"><i data-lucide="globe-2" aria-hidden="true"></i></span>
+            <strong>Website development</strong>
+            <p>Mobile-friendly business website development and hosting for UGX 400,000.</p>
           </a>
           <a class="quick-card" href="#contact" data-animate>
             <span class="icon green"><i data-lucide="headphones" aria-hidden="true"></i></span>
@@ -1982,7 +1987,9 @@
           <h4>Quick links</h4>
           <ul class="footer-list">
             <li><a href="services.html">Services</a></li>
+            <li><a href="website-development.html">Website package — UGX 400,000</a></li>
             <li><a href="#reviews">Reviews</a></li>
+            <li><a href="leave-review.html">Leave a Google review</a></li>
             <li><a href="#passport">TIN & Passport help</a></li>
             <li><a href="#courses">Courses</a></li>
             <li><a href="#pricing">Pricing</a></li>
@@ -2034,7 +2041,6 @@
     const mobileMenu = document.getElementById("mobile-menu");
     const navLinks = document.querySelectorAll("a[href^='#']");
     const animatedItems = document.querySelectorAll("[data-animate]");
-    const counters = document.querySelectorAll(".counter");
 
     if (window.lucide) {
       window.lucide.createIcons();
@@ -2065,35 +2071,6 @@
 
     animatedItems.forEach((item) => revealObserver.observe(item));
 
-    const animateCounter = (counter) => {
-      const target = Number(counter.dataset.count || 0);
-      const duration = 1300;
-      const start = performance.now();
-
-      const tick = (now) => {
-        const progress = Math.min((now - start) / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        counter.textContent = Math.round(target * eased).toString();
-
-        if (progress < 1) {
-          requestAnimationFrame(tick);
-        }
-      };
-
-      requestAnimationFrame(tick);
-    };
-
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          animateCounter(entry.target);
-          counterObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.7 });
-
-    counters.forEach((counter) => counterObserver.observe(counter));
-
     const sections = [...document.querySelectorAll("main section[id]")];
     const desktopLinks = [...document.querySelectorAll("#desktop-nav a")];
 
@@ -2109,6 +2086,7 @@
 
     sections.forEach((section) => activeObserver.observe(section));
   </script>
+  <script defer src="assets/analytics.js"></script>
   <script src="assets/ai-pet.js"></script>
 </body>
 </html>

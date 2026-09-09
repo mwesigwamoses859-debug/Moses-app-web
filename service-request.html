@@ -19,7 +19,7 @@
     <div class="container">
       <nav class="nav" aria-label="Main navigation">
         <a class="brand" href="index.html#home">
-          <img src="https://lh3.googleusercontent.com/d/1x_XWeK7qc1-51aVWrnvCkvHL3zLnnLbt" alt="MosesTechFix logo">
+          <img src="assets/mosestechfix-logo-v2.png" alt="MosesTechFix Solutions logo">
           <span>MosesTechFix <small>IT services, training, and registration</small></span>
         </a>
         <ul class="nav-links">
@@ -90,7 +90,7 @@
                     <option>IT procurement support</option>
                     <option>Training course</option>
                     <option>Premium TIN or passport registration</option>
-                    <option>Website project</option>
+                    <option value="Website project">Website project — UGX 400,000 with hosting</option>
                   </select>
                 </div>
                 <div class="field">
@@ -181,6 +181,10 @@
   <script>
     if (window.lucide) window.lucide.createIcons();
 
+    const requestedService = new URLSearchParams(window.location.search).get("service");
+    const serviceSelect = document.getElementById("service");
+    if (requestedService && serviceSelect) serviceSelect.value = requestedService;
+
     document.querySelectorAll("[data-whatsapp-form]").forEach((form) => {
       form.addEventListener("submit", (event) => {
         event.preventDefault();
@@ -199,6 +203,7 @@
       });
     });
   </script>
+  <script defer src="assets/analytics.js"></script>
   <script src="assets/ai-pet.js"></script>
 </body>
 </html>

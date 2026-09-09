@@ -285,6 +285,97 @@ p {
   color: rgba(255, 255, 255, 0.9);
 }
 
+.offer-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.7fr);
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4rem);
+}
+
+.offer-price-card {
+  display: grid;
+  gap: 0.65rem;
+  padding: clamp(1.2rem, 3vw, 2rem);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.offer-price-card span {
+  color: #a7e7de;
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.offer-price-card strong {
+  color: var(--paper);
+  font-family: "Space Grotesk", "Manrope", Arial, sans-serif;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1;
+}
+
+.offer-price-card p,
+.offer-price-card small {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.process-grid li {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+
+.process-grid li > strong {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--paper);
+  background: var(--brand-dark);
+}
+
+.process-grid p {
+  margin-top: 0.4rem;
+  color: var(--muted);
+}
+
+.review-process label {
+  font-weight: 900;
+}
+
+.review-process textarea {
+  width: 100%;
+  min-height: 132px;
+  padding: 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--ink);
+  background: var(--paper);
+  resize: vertical;
+}
+
+.copy-status {
+  min-height: 1.5rem;
+  color: var(--green) !important;
+  font-weight: 800;
+}
+
 .ai-portal-shell {
   padding: clamp(18px, 3vw, 32px);
   border: 1px solid var(--line);
@@ -643,6 +734,11 @@ section {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .offer-hero-grid,
+  .process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .photo-card.wide {
     grid-column: span 1;
   }
@@ -700,6 +796,11 @@ section {
   .form-grid,
   .photo-grid,
   .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-hero-grid,
+  .process-grid {
     grid-template-columns: 1fr;
   }
 

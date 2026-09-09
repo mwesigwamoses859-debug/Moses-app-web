@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Share an honest Google review about your experience with MosesTechFix Solutions in Kampala, Uganda.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mosestechfixsolution.com/leave-review">
+  <title>Leave a Google Review | MosesTechFix Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/pages.css">
+  <link rel="stylesheet" href="assets/tech-theme.css">
+  <link rel="stylesheet" href="assets/ai-pet.css">
+  <script defer src="assets/analytics.js"></script>
+</head>
+<body>
+  <header class="site-header"><div class="container"><nav class="nav" aria-label="Main navigation"><a class="brand" href="index.html"><img src="assets/mosestechfix-logo-v2.png" alt="MosesTechFix Solutions logo"><span>MosesTechFix <small>IT services, training, and websites</small></span></a><ul class="nav-links"><li><a href="services.html">Services</a></li><li><a href="website-development.html">Websites</a></li><li><a href="service-request.html">Request service</a></li><li><a href="index.html#contact">Contact</a></li></ul></nav></div></header>
+  <main>
+    <section class="page-hero review-hero">
+      <div class="container">
+        <p class="eyebrow"><i data-lucide="star" aria-hidden="true"></i> Customer feedback</p>
+        <h1>How was your experience with MosesTechFix?</h1>
+        <p class="lead">Your honest Google review helps local customers understand what to expect and helps us improve our service.</p>
+        <div class="hero-actions"><a class="button primary" href="https://g.page/r/CaWsNqxlfJyJEBM/review" target="_blank" rel="noopener noreferrer"><i data-lucide="star" aria-hidden="true"></i> Leave an honest Google review</a><a class="button ghost" href="service-request.html"><i data-lucide="clipboard-list" aria-hidden="true"></i> Request another service</a></div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="grid-2">
+          <article class="card"><span class="icon gold"><i data-lucide="message-square-heart" aria-hidden="true"></i></span><h2>Helpful review ideas</h2><p>You can briefly mention the service you received, what was handled well and whether you would recommend MosesTechFix. Please only share your genuine experience.</p><ul class="check-list"><li><i data-lucide="check" aria-hidden="true"></i> The service or training you received</li><li><i data-lucide="check" aria-hidden="true"></i> Communication and response time</li><li><i data-lucide="check" aria-hidden="true"></i> The result or problem that was resolved</li></ul></article>
+          <article class="card review-process"><span class="icon"><i data-lucide="send" aria-hidden="true"></i></span><h2>Message to send after a completed job</h2><p>MosesTechFix can copy this message and send it to a customer after successful service:</p><label for="review-message">Review request message</label><textarea id="review-message" readonly>Thank you for choosing MosesTechFix Solutions. If our service helped you, please share an honest Google review: https://mosestechfixsolution.com/leave-review</textarea><button class="button ghost" id="copy-review-message" type="button"><i data-lucide="copy" aria-hidden="true"></i> Copy message</button><p class="copy-status" id="copy-status" role="status" aria-live="polite"></p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-grid"><div><h3>MosesTechFix Solutions</h3><p>Practical technology help for individuals and businesses in Uganda.</p></div><div><h4>Quick links</h4><ul class="footer-list"><li><a href="services.html">Services</a></li><li><a href="website-development.html">Website package</a></li><li><a href="service-request.html">Service request</a></li></ul></div><div><h4>Contact</h4><ul class="footer-list"><li><a href="tel:+256708262179">+256 708 262 179</a></li><li><a href="mailto:mosestechfixsolutions@gmail.com">mosestechfixsolutions@gmail.com</a></li></ul></div></div><div class="footer-bottom">&copy; 2026 MosesTechFix Solutions. All rights reserved.</div></div></footer>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="assets/pages.js"></script>
+  <script>
+    const copyButton = document.getElementById("copy-review-message");
+    const reviewMessage = document.getElementById("review-message");
+    const copyStatus = document.getElementById("copy-status");
+    copyButton?.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(reviewMessage.value);
+        copyStatus.textContent = "Review request copied.";
+      } catch {
+        reviewMessage.select();
+        copyStatus.textContent = "Message selected. Copy it from your browser menu.";
+      }
+    });
+  </script>
+  <script src="assets/ai-pet.js"></script>
+</body>
+</html>
