@@ -137,8 +137,10 @@ p,
   align-items: center;
   overflow: hidden;
   border: 0;
-  background: transparent url("images/hero-objects.png") 91% 42% / min(44vw, 700px) auto no-repeat;
-  animation: rebuild-hero-float 9s ease-in-out infinite;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.92) 45%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0.1) 100%),
+    url("images/mosestechfix-hero-v2.png") center / cover no-repeat;
+  animation: none;
 }
 
 .hero::before,
@@ -386,7 +388,9 @@ main > section:nth-of-type(odd):not(.hero):not(.quick-actions) {
 
   .hero {
     padding-top: 190px;
-    background: transparent url("images/hero-objects.png") 67% 5% / 410px auto no-repeat;
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.9), rgba(239, 249, 250, 0.97)),
+      url("images/mosestechfix-hero-v2.png") 70% top / auto 520px no-repeat;
     animation-name: none;
   }
 

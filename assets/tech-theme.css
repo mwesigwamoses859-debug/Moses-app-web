@@ -1195,11 +1195,16 @@ main > section.section-alt {
   background-color: rgba(244, 249, 250, 0.82);
 }
 
-.hero,
 .page-hero {
   background:
     linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.92) 47%, rgba(236, 250, 251, 0.7) 100%),
     url("images/site-tech-background.jpg") center / cover no-repeat;
+}
+
+.hero {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.93) 42%, rgba(255, 255, 255, 0.28) 67%, rgba(255, 255, 255, 0.08) 100%),
+    url("images/mosestechfix-hero-v2.png") center / cover no-repeat;
 }
 
 @media (max-width: 760px) {
@@ -1207,10 +1212,16 @@ main > section.section-alt {
     background-attachment: scroll;
   }
 
-  .hero,
   .page-hero {
     background:
       linear-gradient(rgba(255, 255, 255, 0.94), rgba(239, 249, 250, 0.9)),
       url("images/site-tech-background.jpg") center / cover no-repeat;
+  }
+
+  .hero {
+    min-height: auto;
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.9), rgba(239, 249, 250, 0.96)),
+      url("images/mosestechfix-hero-v2.png") 70% top / auto 520px no-repeat;
   }
 }
