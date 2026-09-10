@@ -662,6 +662,38 @@ main > section:nth-of-type(odd):not(.hero):not(.quick-actions) {
   }
 }
 
+/* MosesTechFix visual refresh: use the approved lightweight technology background consistently. */
+body {
+  background: #061526 url("images/mosestechfix-background-v2.svg") center / cover fixed !important;
+}
+
+body::before {
+  display: none !important;
+}
+
+.hero,
+.page-hero {
+  background:
+    linear-gradient(90deg, rgba(5, 20, 35, 0.94), rgba(7, 47, 68, 0.78)),
+    url("images/mosestechfix-background-v2.svg") center / cover no-repeat !important;
+  animation: none !important;
+}
+
+#services,
+#courses,
+#about,
+#contact,
+#reviews,
+#passport,
+.quick-actions,
+main > section.section-alt {
+  background-image:
+    linear-gradient(rgba(238, 248, 249, 0.93), rgba(230, 244, 246, 0.91)),
+    url("images/mosestechfix-background-v2.svg") !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
 /* Additional real-photo section backgrounds */
 .quick-actions {
   position: relative;
@@ -986,4 +1018,36 @@ main > section:nth-of-type(odd):not(.hero):not(.quick-actions) {
   .partner-floater {
     animation: none;
   }
+}
+
+/* Keep the approved MosesTechFix background as the final site-wide layer. */
+body {
+  background: #061526 url("images/mosestechfix-background-v2.svg") center / cover fixed !important;
+}
+
+body::before {
+  display: none !important;
+}
+
+.hero,
+.page-hero {
+  background:
+    linear-gradient(90deg, rgba(5, 20, 35, 0.94), rgba(7, 47, 68, 0.78)),
+    url("images/mosestechfix-background-v2.svg") center / cover no-repeat !important;
+  animation: none !important;
+}
+
+#services,
+#courses,
+#about,
+#contact,
+#reviews,
+#passport,
+.quick-actions,
+main > section.section-alt {
+  background-image:
+    linear-gradient(rgba(238, 248, 249, 0.93), rgba(230, 244, 246, 0.91)),
+    url("images/mosestechfix-background-v2.svg") !important;
+  background-position: center !important;
+  background-size: cover !important;
 }
