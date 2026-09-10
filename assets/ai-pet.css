@@ -6,7 +6,7 @@
   display: grid;
   justify-items: center;
   gap: 7px;
-  font-family: Manrope, system-ui, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @media (min-width: 781px) {
