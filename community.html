@@ -20,6 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/pages.css">
   <link rel="stylesheet" href="assets/tech-theme.css?v=type1">
+  <link rel="stylesheet" href="assets/community.css?v=1">
   <link rel="stylesheet" href="assets/ai-pet.css">
   <script defer src="assets/analytics.js"></script>
   <script type="application/ld+json">
@@ -41,7 +42,7 @@
     }
   </script>
 </head>
-<body>
+<body class="community-page">
   <header class="site-header">
     <div class="container">
       <nav class="nav" aria-label="Main navigation">
@@ -61,31 +62,47 @@
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="container">
-        <p class="eyebrow"><i data-lucide="heart-handshake" aria-hidden="true"></i> MosesTechFix Community</p>
-        <h1>Practical computer access for stronger school communities.</h1>
-        <p class="lead">We help schools build digital confidence through suitable computer donations, hands-on learning, and simple support for computer labs.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#school-request"><i data-lucide="school" aria-hidden="true"></i> Apply as a school</a>
-          <a class="button ghost" href="#equipment-donation"><i data-lucide="monitor-up" aria-hidden="true"></i> Donate suitable equipment</a>
+    <section class="page-hero community-hero">
+      <div class="container community-hero-layout">
+        <div class="community-hero-copy">
+          <p class="eyebrow"><i data-lucide="heart-handshake" aria-hidden="true"></i> MosesTechFix Community</p>
+          <h1>Practical computer access for stronger school communities.</h1>
+          <p class="lead">We help schools build digital confidence through suitable computer donations, hands-on learning, and simple support for computer labs.</p>
+          <div class="community-hero-tags" aria-label="Community focus areas">
+            <span><i data-lucide="laptop" aria-hidden="true"></i> Device access</span>
+            <span><i data-lucide="graduation-cap" aria-hidden="true"></i> Digital skills</span>
+            <span><i data-lucide="wrench" aria-hidden="true"></i> Lab support</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button primary" href="#school-request"><i data-lucide="school" aria-hidden="true"></i> Apply as a school</a>
+            <a class="button ghost" href="#equipment-donation"><i data-lucide="monitor-up" aria-hidden="true"></i> Donate suitable equipment</a>
+          </div>
         </div>
+        <aside class="community-hero-panel" aria-label="Community programme summary">
+          <p class="community-panel-label">Starting with real needs</p>
+          <h2>Useful technology begins with a school’s plan.</h2>
+          <ul>
+            <li><span><i data-lucide="search-check" aria-hidden="true"></i></span><p><strong>We listen first.</strong> Each request begins with the school’s learners, equipment, and setting.</p></li>
+            <li><span><i data-lucide="shield-check" aria-hidden="true"></i></span><p><strong>We assess carefully.</strong> Support is chosen for practical, safe, long-term use.</p></li>
+            <li><span><i data-lucide="notebook-pen" aria-hidden="true"></i></span><p><strong>We report honestly.</strong> Updates are shared only after real work is complete.</p></li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <section>
+    <section class="community-introduction">
       <div class="container">
         <div class="section-heading center">
           <p class="eyebrow"><i data-lucide="sparkles" aria-hidden="true"></i> A social-impact programme</p>
-          <h2>Technology should open doors for every learner.</h2>
-          <p class="lead">MosesTechFix Community is a social-impact programme of MosesTechFix Solutions. It is not a registered NGO. The programme is beginning with practical, school-focused support in Uganda.</p>
+          <h2>A practical beginning, built around schools.</h2>
+          <p class="lead">MosesTechFix Community is a social-impact programme of MosesTechFix Solutions. It is not a registered NGO. We are beginning with useful, school-focused support in Uganda.</p>
         </div>
 
-        <div class="notice">
+        <div class="notice community-boundary">
           <span class="icon gold"><i data-lucide="shield-check" aria-hidden="true"></i></span>
           <div>
-            <strong>Community activity stays separate from paid services.</strong>
-            <p>School support, donated equipment, beneficiary selection, and activity records are handled separately. This page does not accept monetary donations or direct visitors to the business payment number.</p>
+            <strong>Community support stays separate from paid IT services.</strong>
+            <p>School support, donated equipment, beneficiary selection, and impact records are handled separately. This page does not accept monetary donations or direct visitors to the business payment number.</p>
           </div>
         </div>
       </div>
@@ -95,21 +112,25 @@
       <div class="container">
         <div class="section-heading center">
           <p class="eyebrow"><i data-lucide="layers-3" aria-hidden="true"></i> How we contribute</p>
-          <h2>Three practical ways to build digital access.</h2>
+          <h2>Three ways to turn access into confidence.</h2>
+          <p class="lead">We focus on support that a school can use, maintain, and build on.</p>
         </div>
-        <div class="grid-3">
-          <article class="card">
-            <span class="icon"><i data-lucide="laptop" aria-hidden="true"></i></span>
+        <div class="grid-3 community-impact-grid">
+          <article class="card community-card community-card-cyan">
+            <div class="community-card-top"><span class="community-card-number">01</span><span class="icon"><i data-lucide="laptop" aria-hidden="true"></i></span></div>
+            <p class="community-card-label">Device access</p>
             <h3>Refurbish and place devices</h3>
             <p>We assess suitable donated computers, prepare them for safe use, and place them with selected schools when they can make a real difference.</p>
           </article>
-          <article class="card">
-            <span class="icon green"><i data-lucide="graduation-cap" aria-hidden="true"></i></span>
+          <article class="card community-card community-card-green">
+            <div class="community-card-top"><span class="community-card-number">02</span><span class="icon green"><i data-lucide="graduation-cap" aria-hidden="true"></i></span></div>
+            <p class="community-card-label">Practical learning</p>
             <h3>Teach practical computer skills</h3>
             <p>Hands-on sessions can cover computer basics, Office tools, online safety, digital careers, and responsible use of technology.</p>
           </article>
-          <article class="card">
-            <span class="icon coral"><i data-lucide="wrench" aria-hidden="true"></i></span>
+          <article class="card community-card community-card-gold">
+            <div class="community-card-top"><span class="community-card-number">03</span><span class="icon coral"><i data-lucide="wrench" aria-hidden="true"></i></span></div>
+            <p class="community-card-label">Lasting support</p>
             <h3>Support school computer labs</h3>
             <p>We help schools identify basic setup, maintenance, and teacher-support needs so equipment is more likely to remain useful.</p>
           </article>
@@ -121,23 +142,24 @@
       <div class="container">
         <div class="section-heading center">
           <p class="eyebrow"><i data-lucide="route" aria-hidden="true"></i> A clear process</p>
-          <h2>Start small, choose fairly, report honestly.</h2>
+          <h2>From a school request to useful support.</h2>
+          <p class="lead">A simple process keeps decisions fair, practical, and clear to everyone involved.</p>
         </div>
-        <div class="process-grid" aria-label="Community support process">
-          <article class="process-step"><span class="step-number">1</span><h3>School request</h3><p>A school tells us about its learners, location, current equipment, and priority need.</p></article>
-          <article class="process-step"><span class="step-number">2</span><h3>Needs check</h3><p>We discuss whether devices, training, or lab support are practical for the school’s setting.</p></article>
-          <article class="process-step"><span class="step-number">3</span><h3>Agree support</h3><p>We confirm what can be provided, the school’s point person, and realistic next steps.</p></article>
-          <article class="process-step"><span class="step-number">4</span><h3>Share impact</h3><p>After activity is complete, we publish only truthful updates and photos with the school’s permission.</p></article>
+        <div class="process-grid community-process-grid" aria-label="Community support process">
+          <article class="process-step community-process-step"><span class="step-number">01</span><h3>School request</h3><p>A school shares its learners, location, current equipment, and priority need.</p></article>
+          <article class="process-step community-process-step"><span class="step-number">02</span><h3>Needs check</h3><p>Together, we look at what is realistic for the school’s setting.</p></article>
+          <article class="process-step community-process-step"><span class="step-number">03</span><h3>Agree support</h3><p>We confirm the support, school contact person, and practical next steps.</p></article>
+          <article class="process-step community-process-step"><span class="step-number">04</span><h3>Share impact</h3><p>After the work is complete, we share only truthful updates with permission.</p></article>
         </div>
       </div>
     </section>
 
     <section class="section-alt" id="school-request">
       <div class="container grid-2">
-        <div class="card">
+        <div class="card community-info-card">
           <p class="eyebrow"><i data-lucide="clipboard-check" aria-hidden="true"></i> School application</p>
-          <h2>Tell us what your school needs.</h2>
-          <p class="lead">This short application helps MosesTechFix Community understand where support could be useful. Submitting opens a pre-filled WhatsApp message; no information is stored on this website.</p>
+          <h2>Tell us what would make the biggest difference.</h2>
+          <p class="lead">This short request helps us understand where support could be useful. It opens a pre-filled WhatsApp message; no information is stored on this website.</p>
           <ul class="check-list">
             <li><i data-lucide="check" aria-hidden="true"></i> Suitable for primary, secondary, vocational, and community-learning settings</li>
             <li><i data-lucide="check" aria-hidden="true"></i> Requests can be for devices, skills training, lab support, or a combination</li>
@@ -145,7 +167,12 @@
           </ul>
         </div>
 
-        <form class="card request-form" id="school-request-form">
+        <form class="card request-form community-form" id="school-request-form">
+          <div class="community-form-heading">
+            <p class="community-card-label">School support request</p>
+            <h2>Start your application.</h2>
+            <p>Share only the details we need to understand your request.</p>
+          </div>
           <div class="form-grid">
             <label class="field"><span>School or organisation name</span><input name="school" required autocomplete="organization"></label>
             <label class="field"><span>District / town</span><input name="location" required autocomplete="address-level2"></label>
@@ -163,16 +190,18 @@
 
     <section id="equipment-donation">
       <div class="container grid-2">
-        <div class="card">
+        <div class="card community-info-card community-equipment-card">
           <p class="eyebrow"><i data-lucide="monitor-up" aria-hidden="true"></i> Equipment donations</p>
-          <h2>Have a suitable computer to give?</h2>
-          <p class="lead">We welcome conversations about workable laptops, desktops, monitors, keyboards, mice, and basic networking equipment. Each item is assessed before it is accepted or matched with a school.</p>
+          <h2>Have useful equipment to give?</h2>
+          <p class="lead">We welcome conversations about workable laptops, desktops, monitors, keyboards, mice, and basic networking equipment.</p>
+          <p class="community-small-print"><i data-lucide="circle-check" aria-hidden="true"></i> Every item is assessed before it is accepted or matched with a school.</p>
           <a class="button primary" href="https://wa.me/256708262179?text=Hello%20MosesTechFix%20Community%2C%20I%20would%20like%20to%20discuss%20donating%20suitable%20computer%20equipment.%20The%20item(s)%20I%20have%20are%3A" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle" aria-hidden="true"></i> Discuss equipment donation</a>
         </div>
-        <div class="card">
+        <div class="card community-info-card community-impact-card">
           <p class="eyebrow"><i data-lucide="bar-chart-3" aria-hidden="true"></i> Impact updates</p>
-          <h2>We will report facts, not promises.</h2>
-          <p class="lead">As the first school activities are completed, this page will share the school supported, type of activity, devices placed, learners reached, and approved photos. No impact figures are published before work is complete.</p>
+          <h2>Real work. Clear updates.</h2>
+          <p class="lead">When an activity is complete, this page will share the school supported, work done, devices placed, learners reached, and approved photos.</p>
+          <p class="community-small-print"><i data-lucide="circle-check" aria-hidden="true"></i> No impact figures are published before work is complete.</p>
           <a class="button ghost" href="index.html#contact"><i data-lucide="mail" aria-hidden="true"></i> Contact MosesTechFix</a>
         </div>
       </div>
