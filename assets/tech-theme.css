@@ -591,6 +591,44 @@ section {
   }
 }
 
+/* Preview refresh: a lighter, layered background that preserves the existing teal, navy, and violet accents. */
+html {
+  background: #e5f3f6;
+}
+
+body {
+  background-color: #edf8f9;
+  background-image:
+    radial-gradient(circle at 8% 14%, rgba(36, 211, 238, 0.2) 0, rgba(36, 211, 238, 0) 28rem),
+    radial-gradient(circle at 91% 32%, rgba(139, 124, 255, 0.14) 0, rgba(139, 124, 255, 0) 30rem),
+    linear-gradient(118deg, rgba(255, 255, 255, 0.86) 0%, rgba(244, 252, 253, 0.8) 48%, rgba(231, 246, 249, 0.86) 100%),
+    url("images/mosestechfix-background-v2.svg");
+  background-position: center, center, center, center;
+  background-size: auto, auto, auto, cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+main > section:not(.hero):not(.page-hero),
+#services,
+#courses,
+#about,
+#contact {
+  background-color: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(9px);
+}
+
+main > section.section-alt {
+  background-color: rgba(240, 250, 251, 0.78);
+}
+
+@media (max-width: 760px) {
+  body {
+    background-attachment: scroll;
+    background-position: 16% 0, 88% 22%, center, center;
+  }
+}
+
 /* Subtle motion for the transparent 3D object backgrounds */
 @keyframes hero-object-float {
   0%,
