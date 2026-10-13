@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="assets/pages.css">
   <link rel="stylesheet" href="assets/tech-theme.css?v=type1">
   <link rel="stylesheet" href="assets/ai-pet.css">
+  <link rel="stylesheet" href="assets/schools-directory.css">
   <script defer src="assets/analytics.js"></script>
   <script type="application/ld+json">
     {
@@ -53,6 +54,7 @@
           <li><a href="services.html">Services</a></li>
           <li><a href="index.html#courses">Courses</a></li>
           <li><a href="community.html" aria-current="page">Community</a></li>
+          <li><a href="#schools-directory">Schools Directory</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="service-request.html">Request service</a></li>
         </ul>
@@ -67,8 +69,9 @@
         <h1>Practical computer access for stronger school communities.</h1>
         <p class="lead">We help schools build digital confidence through suitable computer donations, hands-on learning, and simple support for computer labs.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#school-request"><i data-lucide="school" aria-hidden="true"></i> Apply as a school</a>
-          <a class="button ghost" href="#equipment-donation"><i data-lucide="monitor-up" aria-hidden="true"></i> Donate suitable equipment</a>
+          <a class="button primary" href="#schools-directory"><i data-lucide="layout-grid" aria-hidden="true"></i> View Schools & Funders</a>
+          <a class="button ghost" href="#school-request"><i data-lucide="school" aria-hidden="true"></i> Apply as a school</a>
+          <a class="button ghost" href="#equipment-donation"><i data-lucide="monitor-up" aria-hidden="true"></i> Donate equipment</a>
         </div>
       </div>
     </section>
@@ -132,6 +135,154 @@
       </div>
     </section>
 
+    <!-- MosesTechFix Community - Schools & Funders Directory -->
+    <section id="schools-directory" class="schools-directory-section">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow"><i data-lucide="layers-3" aria-hidden="true"></i> Digital Access Directory</p>
+          <h2>Schools, Funders &amp; Computer Progress</h2>
+          <p class="lead">Explore participating schools across Uganda, track verified computer lab equipment goals, and discover where equipment donors and funders are making an impact.</p>
+        </div>
+
+        <!-- 1. Impact Metrics Bar for Funders & Progress -->
+        <div class="directory-metrics-bar">
+          <div class="metric-card">
+            <div class="metric-header">
+              <span>Goal Target</span>
+              <i data-lucide="target" aria-hidden="true"></i>
+            </div>
+            <span class="metric-value" id="metric-total-goal">-- PCs</span>
+            <span class="metric-subtitle">Total computers requested</span>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-header">
+              <span>Equipment Placed</span>
+              <i data-lucide="check-check" aria-hidden="true"></i>
+            </div>
+            <span class="metric-value" id="metric-total-funded" style="color:var(--green, #4de2b3);">-- PCs</span>
+            <span class="metric-subtitle">Delivered or pledged units</span>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-header">
+              <span>Overall Progress</span>
+              <span id="metric-progress-pct" style="color:var(--brand, #24d3ee);font-weight:800;">--%</span>
+            </div>
+            <span class="metric-value" style="font-size:1.35rem;">Lab Completion</span>
+            <div class="overall-progress-track">
+              <div class="overall-progress-fill" id="metric-progress-track" style="width: 0%;"></div>
+            </div>
+            <span class="metric-subtitle">Across active school labs</span>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-header">
+              <span>Funders &amp; Partners</span>
+              <i data-lucide="heart-handshake" aria-hidden="true"></i>
+            </div>
+            <span class="metric-value" id="metric-total-funders" style="color:var(--gold, #ffc857);">--</span>
+            <span class="metric-subtitle"><span id="metric-active-schools">--</span> registered schools</span>
+          </div>
+        </div>
+
+        <!-- 2. Search & Filter Bar Controls -->
+        <div class="directory-controls">
+          <div class="search-and-sort-row">
+            <div class="directory-search-box">
+              <i data-lucide="search" class="search-icon" aria-hidden="true"></i>
+              <input 
+                type="search" 
+                id="directory-search-input" 
+                class="directory-search-input" 
+                placeholder="Search school name, location, or district (e.g. Kampala, Mukono)..." 
+                aria-label="Search schools"
+              >
+              <button type="button" id="search-clear-btn" class="search-clear-btn" aria-label="Clear search">
+                <i data-lucide="x" style="width:16px;height:16px;"></i>
+              </button>
+            </div>
+
+            <select id="filter-region-select" class="directory-select" aria-label="Filter by region">
+              <option value="all">All Regions</option>
+              <option value="Kampala">Kampala District</option>
+              <option value="Wakiso">Wakiso District</option>
+              <option value="Mukono">Mukono District</option>
+              <option value="Jinja">Jinja District</option>
+              <option value="Masaka">Masaka District</option>
+              <option value="Mityana">Mityana District</option>
+            </select>
+
+            <select id="sort-by-select" class="directory-select" aria-label="Sort schools">
+              <option value="urgent">Sort: Urgent Need First</option>
+              <option value="closest">Sort: Closest to Goal</option>
+              <option value="progress-high">Sort: Highest Funded %</option>
+              <option value="alphabetical">Sort: Name (A to Z)</option>
+            </select>
+          </div>
+
+          <!-- Category Tabs -->
+          <div class="category-tabs-container" role="tablist" aria-label="School status tabs">
+            <button class="category-tab-btn active" data-tab="all" role="tab" aria-selected="true">
+              <i data-lucide="layout-grid" style="width:16px;height:16px;"></i> All Schools <span class="tab-badge" id="tab-count-all">0</span>
+            </button>
+            <button class="category-tab-btn" data-tab="active" role="tab" aria-selected="false">
+              <i data-lucide="alert-circle" style="width:16px;height:16px;"></i> Active Needs <span class="tab-badge" id="tab-count-active">0</span>
+            </button>
+            <button class="category-tab-btn" data-tab="in-progress" role="tab" aria-selected="false">
+              <i data-lucide="clock" style="width:16px;height:16px;"></i> In Progress <span class="tab-badge" id="tab-count-in-progress">0</span>
+            </button>
+            <button class="category-tab-btn" data-tab="completed" role="tab" aria-selected="false">
+              <i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Completed / Success Stories <span class="tab-badge" id="tab-count-completed">0</span>
+            </button>
+          </div>
+
+          <!-- Secondary Filter Chips & Status Indicator -->
+          <div class="filter-chips-row">
+            <div class="filter-chips-group">
+              <span class="chip-label">Urgency:</span>
+              <button type="button" class="filter-chip active" data-urgency="all">All Needs</button>
+              <button type="button" class="filter-chip" data-urgency="urgent">Urgent Need</button>
+              <button type="button" class="filter-chip" data-urgency="nearly-funded">Nearly Funded</button>
+              <button type="button" class="filter-chip" data-urgency="fully-funded">Fully Funded</button>
+            </div>
+
+            <div class="filter-status-text">
+              <span>Showing <strong id="showing-schools-count">0</strong> of <strong id="total-filtered-count">0</strong> schools</span>
+              <button type="button" id="reset-all-filters-btn" class="reset-filters-btn">Reset filters</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. The 3-Column Responsive School Cards Grid -->
+        <div class="schools-grid" id="schools-cards-grid" aria-live="polite">
+          <!-- Populated dynamically by assets/schools-directory.js -->
+        </div>
+
+        <!-- 4. Pagination / Load More Button -->
+        <div class="directory-pagination" id="directory-pagination">
+          <button type="button" id="load-more-schools-btn" class="button ghost load-more-btn">
+            Load More Schools <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <span class="pagination-count">Displaying in clean batches to ensure fast page speed</span>
+        </div>
+
+        <!-- 5. "Submit Your School" Call To Action Box -->
+        <div class="submit-school-banner">
+          <div class="banner-content">
+            <span class="banner-icon"><i data-lucide="mail-plus" aria-hidden="true"></i></span>
+            <div>
+              <h3>Are you a school in need of computers?</h3>
+              <p>Apply to join the MosesTechFix Digital Access directory to connect with verified equipment donors, diaspora partners, and practical IT lab setup support.</p>
+            </div>
+          </div>
+          <a href="#school-request" class="button primary">
+            <i data-lucide="clipboard-check" aria-hidden="true"></i> Apply for School Support
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="section-alt" id="school-request">
       <div class="container grid-2">
         <div class="card">
@@ -190,7 +341,75 @@
     </div>
   </footer>
 
+  <!-- Interactive School Details & Funder Pledge Modal -->
+  <dialog class="directory-modal" id="school-modal" aria-labelledby="modal-school-title">
+    <div class="modal-dialog-panel">
+      <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+        <i data-lucide="x" style="width:20px;height:20px;"></i>
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-badges">
+          <span class="school-status-pill status-in-progress" id="modal-school-status-badge">
+            <i data-lucide="clock" style="width:12px;height:12px;"></i> IN PROGRESS
+          </span>
+        </div>
+        <h2 class="modal-title" id="modal-school-title">School Name</h2>
+        <div class="modal-meta-row">
+          <span class="modal-meta-item"><i data-lucide="map-pin" style="width:14px;height:14px;"></i> <span id="modal-school-location">Kampala</span></span>
+          <span class="modal-meta-item"><i data-lucide="users" style="width:14px;height:14px;"></i> <span id="modal-school-students">250 Learners</span></span>
+          <span class="modal-meta-item"><i data-lucide="user-check" style="width:14px;height:14px;"></i> <span id="modal-school-lead">Principal</span></span>
+        </div>
+      </div>
+
+      <div class="modal-progress-card">
+        <div class="modal-progress-stats">
+          <div class="modal-stat-box">
+            <span>Overall Goal</span>
+            <strong id="modal-school-goal">15 PCs</strong>
+          </div>
+          <div class="modal-stat-box">
+            <span>Funded Units</span>
+            <strong id="modal-school-funded" style="color:var(--green, #4de2b3);">6 PCs</strong>
+          </div>
+          <div class="modal-stat-box">
+            <span>Progress</span>
+            <strong id="modal-school-percent" style="color:var(--brand, #24d3ee);">40%</strong>
+          </div>
+        </div>
+        <div class="card-progress-bar">
+          <div class="card-progress-fill" id="modal-school-progress-fill" style="width: 40%;"></div>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="modal-section-title"><i data-lucide="file-text"></i> About School &amp; Computer Lab Needs</h4>
+        <div class="modal-details-box">
+          <p id="modal-school-summary" style="margin-bottom:0.65rem;"></p>
+          <p><strong style="color:var(--ink,#eef7ff);">Equipment Requirements:</strong> <span id="modal-school-needs"></span></p>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="modal-section-title"><i data-lucide="heart-handshake"></i> Verified Funders &amp; Donors</h4>
+        <div class="modal-funders-list" id="modal-school-funders-list">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <div class="modal-cta-group">
+        <a id="modal-whatsapp-pledge-btn" href="#" target="_blank" rel="noopener noreferrer" class="button primary modal-funder-btn">
+          <i data-lucide="message-circle"></i> Pledge Equipment or Funding on WhatsApp ↗
+        </a>
+        <a href="#equipment-donation" class="button ghost" onclick="document.getElementById('school-modal')?.close();" style="font-size:0.85rem;min-height:38px;">
+          Learn How Equipment Donations Work ↓
+        </a>
+      </div>
+    </div>
+  </dialog>
+
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="assets/schools-directory.js"></script>
   <script>
     const schoolRequestForm = document.getElementById("school-request-form");
     schoolRequestForm?.addEventListener("submit", (event) => {
