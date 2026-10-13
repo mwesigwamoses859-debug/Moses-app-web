@@ -82,8 +82,8 @@
         
         <div class="hero-actions">
           <a class="button primary" href="#active-project"><i data-lucide="flame" aria-hidden="true"></i> Help St. Kizito First ↓</a>
-          <a class="button ghost" href="#completed-projects"><i data-lucide="check-circle-2" aria-hidden="true"></i> Completed Projects</a>
           <a class="button ghost" href="#school-request"><i data-lucide="school" aria-hidden="true"></i> Apply as a school</a>
+          <a class="button ghost" href="#how-it-works"><i data-lucide="route" aria-hidden="true"></i> How it works</a>
         </div>
 
         <!-- Trust Note -->
@@ -140,43 +140,17 @@
 
           <div class="metric-card">
             <div class="metric-header">
-              <span>Completed &amp; Queue</span>
-              <i data-lucide="layers" aria-hidden="true"></i>
+              <span>Learners Target</span>
+              <i data-lucide="users" aria-hidden="true"></i>
             </div>
-            <span class="metric-value" style="color:var(--gold, #ffc857);">
-              <span id="metric-completed-count">2 Labs</span>
-            </span>
-            <span class="metric-subtitle"><span id="metric-queued-count">7 Schools</span> in waiting queue</span>
+            <span class="metric-value" id="metric-pupils-count" style="color:var(--gold, #ffc857);">75 Pupils</span>
+            <span class="metric-subtitle">Primary learners at St. Kizito</span>
           </div>
         </div>
 
         <!-- Single Active Campaign Showcase (Populated dynamically by assets/schools-directory.js) -->
         <div id="active-project-container">
           <!-- St. Kizito Preparatory School Makenke active card renders here -->
-        </div>
-
-        <!-- Completed Projects Section (Success Stories) -->
-        <div class="section-subheading-group" id="completed-projects">
-          <h3>
-            <i data-lucide="check-circle-2" style="color:var(--green,#4de2b3);width:24px;height:24px;"></i>
-            Completed School Projects (100% Equipped)
-          </h3>
-          <p>Projects that have reached 100% funding, received all verified computer workstations, and are now actively teaching pupils.</p>
-        </div>
-        <div class="schools-grid" id="completed-schools-grid" aria-label="Completed school projects">
-          <!-- Rendered dynamically -->
-        </div>
-
-        <!-- Upcoming Queued Schools Section -->
-        <div class="section-subheading-group" id="queued-projects">
-          <h3>
-            <i data-lucide="clock" style="color:var(--gold,#ffc857);width:24px;height:24px;"></i>
-            Upcoming Verified Schools in Queue
-          </h3>
-          <p>These schools have submitted verified applications and are queued for community drives. Their support campaign will unlock as soon as St. Kizito Preparatory School reaches 100% completion.</p>
-        </div>
-        <div class="schools-grid" id="queued-schools-grid" aria-label="Queued school projects">
-          <!-- Rendered dynamically -->
         </div>
 
         <!-- "Submit Your School" Call To Action Banner -->
