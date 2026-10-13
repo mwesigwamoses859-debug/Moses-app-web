@@ -3,33 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="MosesTechFix Community helps schools build digital access through suitable computer donations, practical training, and computer-lab support in Uganda.">
+  <meta name="description" content="Help Ugandan schools access working computers and practical digital skills. Browse verified school needs, buy an item through a supplier, or offer refurbished equipment.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://mosestechfixsolution.com/community">
   <meta name="theme-color" content="#087b91">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mosestechfixsolution.com/community">
-  <meta property="og:title" content="MosesTechFix Community | Digital Access for Schools">
-  <meta property="og:description" content="A social-impact programme supporting practical computer access and digital skills in Ugandan schools.">
+  <meta property="og:title" content="School Computer Needs & Labs | MosesTechFix Community">
+  <meta property="og:description" content="Help a Ugandan school access computers and digital skills. Browse verified school needs and donate suitable equipment.">
   <meta property="og:image" content="https://mosestechfixsolution.com/assets/images/mosestechfix-hero-v2.png">
   <meta property="og:locale" content="en_UG">
   <meta property="og:site_name" content="MosesTechFix Solutions">
-  <title>MosesTechFix Community | Digital Access for Schools</title>
+  <title>School Computer Needs &amp; Labs | MosesTechFix Community</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/pages.css">
   <link rel="stylesheet" href="assets/tech-theme.css?v=type1">
-  <link rel="stylesheet" href="assets/ai-pet.css">
   <link rel="stylesheet" href="assets/schools-directory.css">
+  <link rel="stylesheet" href="assets/ai-pet.css">
   <script defer src="assets/analytics.js"></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "MosesTechFix Community",
+      "name": "MosesTechFix Community - School Computer Needs",
       "url": "https://mosestechfixsolution.com/community",
-      "description": "A MosesTechFix Solutions social-impact programme that helps schools build digital access through suitable devices, practical learning and computer-lab support.",
+      "description": "A MosesTechFix Solutions social-impact programme helping Ugandan schools access working computers and practical digital skills.",
       "isPartOf": {
         "@type": "WebSite",
         "name": "MosesTechFix Solutions",
@@ -46,15 +46,19 @@
   <header class="site-header">
     <div class="container">
       <nav class="nav" aria-label="Main navigation">
+        <a class="nav-home-btn" href="index.html" aria-label="Back to home page">
+          <i data-lucide="arrow-left" aria-hidden="true"></i> Home
+        </a>
+
         <a class="brand" href="index.html#home">
           <img src="assets/mosestechfix-logo.jpg" alt="MosesTechFix Solutions logo">
           <span>MosesTechFix <small>IT services, training and community</small></span>
         </a>
+
         <ul class="nav-links">
+          <li><a href="community.html" aria-current="page" style="color:var(--brand,#24d3ee);font-weight:900;">School Needs</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="index.html#courses">Courses</a></li>
-          <li><a href="community.html" aria-current="page">Community</a></li>
-          <li><a href="#schools-directory">Schools Directory</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="service-request.html">Request service</a></li>
         </ul>
@@ -63,88 +67,46 @@
   </header>
 
   <main>
-    <section class="page-hero">
+    <!-- 1. Opening Section (Guide Sections 3 & 9) -->
+    <section class="page-hero" id="opening">
       <div class="container">
+        <div class="breadcrumb-bar">
+          <a href="index.html"><i data-lucide="home" aria-hidden="true"></i> Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <span>School Computer Needs</span>
+        </div>
+
         <p class="eyebrow"><i data-lucide="heart-handshake" aria-hidden="true"></i> MosesTechFix Community</p>
-        <h1>Practical computer access for stronger school communities.</h1>
-        <p class="lead">We help schools build digital confidence through suitable computer donations, hands-on learning, and simple support for computer labs.</p>
+        <h1>Help a Ugandan school access computers and digital skills.</h1>
+        <p class="lead">Browse verified school needs and choose how you can help. You may buy a listed item through a supplier or offer suitable refurbished equipment. MosesTechFix Community checks school requests and coordinates equipment support with each school.</p>
+        
         <div class="hero-actions">
-          <a class="button primary" href="#schools-directory"><i data-lucide="layout-grid" aria-hidden="true"></i> View Schools & Funders</a>
+          <a class="button primary" href="#current-needs"><i data-lucide="layout-grid" aria-hidden="true"></i> View school needs ↓</a>
           <a class="button ghost" href="#school-request"><i data-lucide="school" aria-hidden="true"></i> Apply as a school</a>
-          <a class="button ghost" href="#equipment-donation"><i data-lucide="monitor-up" aria-hidden="true"></i> Donate equipment</a>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-heading center">
-          <p class="eyebrow"><i data-lucide="sparkles" aria-hidden="true"></i> A social-impact programme</p>
-          <h2>Technology should open doors for every learner.</h2>
-          <p class="lead">MosesTechFix Community is a social-impact programme of MosesTechFix Solutions. It is not a registered NGO. The programme is beginning with practical, school-focused support in Uganda.</p>
+          <a class="button ghost" href="#equipment-donation"><i data-lucide="monitor-up" aria-hidden="true"></i> Offer equipment</a>
         </div>
 
-        <div class="notice">
+        <!-- Trust Note from Section 9 -->
+        <div class="notice" style="margin-top:2.25rem;">
           <span class="icon gold"><i data-lucide="shield-check" aria-hidden="true"></i></span>
           <div>
-            <strong>Community activity stays separate from paid services.</strong>
-            <p>School support, donated equipment, beneficiary selection, and activity records are handled separately. This page does not accept monetary donations or direct visitors to the business payment number.</p>
+            <strong>Verified school requests &middot; No cash donations.</strong>
+            <p>School requests are reviewed before publication. Donated equipment is checked for suitability, and progress is updated after receipt is confirmed. This page does not accept cash donations.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-alt">
+    <!-- 2. Current Needs: The Standard School Needs Board (Guide Sections 3 & 4) -->
+    <section id="current-needs" class="schools-directory-section">
       <div class="container">
         <div class="section-heading center">
-          <p class="eyebrow"><i data-lucide="layers-3" aria-hidden="true"></i> How we contribute</p>
-          <h2>Three practical ways to build digital access.</h2>
-        </div>
-        <div class="grid-3">
-          <article class="card">
-            <span class="icon"><i data-lucide="laptop" aria-hidden="true"></i></span>
-            <h3>Refurbish and place devices</h3>
-            <p>We assess suitable donated computers, prepare them for safe use, and place them with selected schools when they can make a real difference.</p>
-          </article>
-          <article class="card">
-            <span class="icon green"><i data-lucide="graduation-cap" aria-hidden="true"></i></span>
-            <h3>Teach practical computer skills</h3>
-            <p>Hands-on sessions can cover computer basics, Office tools, online safety, digital careers, and responsible use of technology.</p>
-          </article>
-          <article class="card">
-            <span class="icon coral"><i data-lucide="wrench" aria-hidden="true"></i></span>
-            <h3>Support school computer labs</h3>
-            <p>We help schools identify basic setup, maintenance, and teacher-support needs so equipment is more likely to remain useful.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-heading center">
-          <p class="eyebrow"><i data-lucide="route" aria-hidden="true"></i> A clear process</p>
-          <h2>Start small, choose fairly, report honestly.</h2>
-        </div>
-        <div class="process-grid" aria-label="Community support process">
-          <article class="process-step"><span class="step-number">1</span><h3>School request</h3><p>A school tells us about its learners, location, current equipment, and priority need.</p></article>
-          <article class="process-step"><span class="step-number">2</span><h3>Needs check</h3><p>We discuss whether devices, training, or lab support are practical for the school’s setting.</p></article>
-          <article class="process-step"><span class="step-number">3</span><h3>Agree support</h3><p>We confirm what can be provided, the school’s point person, and realistic next steps.</p></article>
-          <article class="process-step"><span class="step-number">4</span><h3>Share impact</h3><p>After activity is complete, we publish only truthful updates and photos with the school’s permission.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- MosesTechFix Community - Schools & Funders Directory -->
-    <section id="schools-directory" class="schools-directory-section">
-      <div class="container">
-        <div class="section-heading center">
-          <p class="eyebrow"><i data-lucide="layers-3" aria-hidden="true"></i> Digital Access Directory</p>
-          <h2>Schools, Funders &amp; Computer Progress</h2>
-          <p class="lead">Explore participating schools across Uganda, track verified computer lab equipment goals, and discover where equipment donors and funders are making an impact.</p>
+          <p class="eyebrow"><i data-lucide="check-circle-2" aria-hidden="true"></i> Verified Listings</p>
+          <h2>Current School Computer Needs</h2>
+          <p class="lead">Browse approved school needs across Uganda. Each card displays confirmed learner counts, current equipment gaps, exact specs needed, and progress.</p>
         </div>
 
-        <!-- 1. Impact Metrics Bar for Funders & Progress -->
+        <!-- Impact Metrics Overview Bar -->
         <div class="directory-metrics-bar">
           <div class="metric-card">
             <div class="metric-header">
@@ -186,7 +148,7 @@
           </div>
         </div>
 
-        <!-- 2. Search & Filter Bar Controls -->
+        <!-- Search & Filter Controls -->
         <div class="directory-controls">
           <div class="search-and-sort-row">
             <div class="directory-search-box">
@@ -233,18 +195,18 @@
               <i data-lucide="clock" style="width:16px;height:16px;"></i> In Progress <span class="tab-badge" id="tab-count-in-progress">0</span>
             </button>
             <button class="category-tab-btn" data-tab="completed" role="tab" aria-selected="false">
-              <i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Completed / Success Stories <span class="tab-badge" id="tab-count-completed">0</span>
+              <i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Fulfilled Needs <span class="tab-badge" id="tab-count-completed">0</span>
             </button>
           </div>
 
-          <!-- Secondary Filter Chips & Status Indicator -->
+          <!-- Secondary Filter Chips -->
           <div class="filter-chips-row">
             <div class="filter-chips-group">
               <span class="chip-label">Urgency:</span>
               <button type="button" class="filter-chip active" data-urgency="all">All Needs</button>
               <button type="button" class="filter-chip" data-urgency="urgent">Urgent Need</button>
               <button type="button" class="filter-chip" data-urgency="nearly-funded">Nearly Funded</button>
-              <button type="button" class="filter-chip" data-urgency="fully-funded">Fully Funded</button>
+              <button type="button" class="filter-chip" data-urgency="fully-funded">Fulfilled</button>
             </div>
 
             <div class="filter-status-text">
@@ -254,20 +216,20 @@
           </div>
         </div>
 
-        <!-- 3. The 3-Column Responsive School Cards Grid -->
+        <!-- Standard School Need Cards Grid (3 Columns Desktop, 1 Column Mobile) -->
         <div class="schools-grid" id="schools-cards-grid" aria-live="polite">
           <!-- Populated dynamically by assets/schools-directory.js -->
         </div>
 
-        <!-- 4. Pagination / Load More Button -->
+        <!-- Pagination / Load More Button -->
         <div class="directory-pagination" id="directory-pagination">
           <button type="button" id="load-more-schools-btn" class="button ghost load-more-btn">
             Load More Schools <i data-lucide="chevron-down" aria-hidden="true"></i>
           </button>
-          <span class="pagination-count">Displaying in clean batches to ensure fast page speed</span>
+          <span class="pagination-count">Displaying in clean batches of 6 cards to maintain fast page speed</span>
         </div>
 
-        <!-- 5. "Submit Your School" Call To Action Box -->
+        <!-- "Submit Your School" Call To Action Banner -->
         <div class="submit-school-banner">
           <div class="banner-content">
             <span class="banner-icon"><i data-lucide="mail-plus" aria-hidden="true"></i></span>
@@ -283,16 +245,83 @@
       </div>
     </section>
 
+    <!-- 3. How It Works (Guide Section 3) -->
+    <section class="section-alt" id="how-it-works">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow"><i data-lucide="route" aria-hidden="true"></i> Accountable Workflow</p>
+          <h2>How School Computer Support Works</h2>
+          <p class="lead">A simple, transparent process from initial request to verified delivery.</p>
+        </div>
+        <div class="process-grid" aria-label="Community support process" style="grid-template-columns: repeat(5, minmax(0, 1fr));">
+          <article class="process-step">
+            <span class="step-number">1</span>
+            <h3>School applies</h3>
+            <p>A school submits a confidential request detailing its learners, location, current equipment, and priority gap.</p>
+          </article>
+          <article class="process-step">
+            <span class="step-number">2</span>
+            <h3>MosesTechFix verifies</h3>
+            <p>We check feasibility, room security, and power stability, and receive school permission before publishing general details.</p>
+          </article>
+          <article class="process-step">
+            <span class="step-number">3</span>
+            <h3>Need is published</h3>
+            <p>A verified card is listed on this public board with confirmed learner counts and exact hardware specifications.</p>
+          </article>
+          <article class="process-step">
+            <span class="step-number">4</span>
+            <h3>Donor offers or buys</h3>
+            <p>A supporter buys a listed item directly through a supplier or offers suitable tested refurbished equipment.</p>
+          </article>
+          <article class="process-step">
+            <span class="step-number">5</span>
+            <h3>School confirms receipt</h3>
+            <p>Devices are delivered, set up, and verified with the school before the public progress count is updated.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Trust and Answers (Guide Sections 3 & 7) -->
+    <section id="trust-and-answers">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow"><i data-lucide="shield-check" aria-hidden="true"></i> Transparency &amp; Standards</p>
+          <h2>Trust and Programme Answers</h2>
+          <p class="lead">Clear guidelines to protect schools, donors, and learners.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <span class="icon"><i data-lucide="user-check" aria-hidden="true"></i></span>
+            <h3>School needs are verified</h3>
+            <p>We confirm that the school exists, that an authorized person requested the help, that a secure room is available, and that learners will directly benefit before publishing a listing.</p>
+          </article>
+          <article class="card">
+            <span class="icon green"><i data-lucide="cpu" aria-hidden="true"></i></span>
+            <h3>Refurbished equipment standards</h3>
+            <p>We accept workable laptops, desktops (Core i3 or higher), monitors, mice, keyboards, and power surge protectors. Every unit is inspected and wiped before lab placement.</p>
+          </article>
+          <article class="card">
+            <span class="icon coral"><i data-lucide="ban" aria-hidden="true"></i></span>
+            <h3>No cash donations</h3>
+            <p>Community activity stays separate from paid business services. This page does not accept money. Donors buying new equipment coordinate directly with equipment suppliers.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. School Application (Guide Section 5: Keep Application Private) -->
     <section class="section-alt" id="school-request">
       <div class="container grid-2">
         <div class="card">
-          <p class="eyebrow"><i data-lucide="clipboard-check" aria-hidden="true"></i> School application</p>
-          <h2>Tell us what your school needs.</h2>
-          <p class="lead">This short application helps MosesTechFix Community understand where support could be useful. Submitting opens a pre-filled WhatsApp message; no information is stored on this website.</p>
+          <p class="eyebrow"><i data-lucide="clipboard-check" aria-hidden="true"></i> Private Application</p>
+          <h2>Apply for computer support for your school.</h2>
+          <p class="lead">This short application helps MosesTechFix Community assess your school’s situation. Submitting opens a pre-filled WhatsApp message; no information is published publicly without review and consent.</p>
           <ul class="check-list">
-            <li><i data-lucide="check" aria-hidden="true"></i> Suitable for primary, secondary, vocational, and community-learning settings</li>
-            <li><i data-lucide="check" aria-hidden="true"></i> Requests can be for devices, skills training, lab support, or a combination</li>
-            <li><i data-lucide="check" aria-hidden="true"></i> Selection depends on readiness, need, available resources, and location</li>
+            <li><i data-lucide="check" aria-hidden="true"></i> Primary, secondary, vocational, and community learning centres eligible</li>
+            <li><i data-lucide="check" aria-hidden="true"></i> Requests reviewed privately by MosesTechFix before listing</li>
+            <li><i data-lucide="check" aria-hidden="true"></i> Student names and confidential school records are never published</li>
           </ul>
         </div>
 
@@ -300,31 +329,33 @@
           <div class="form-grid">
             <label class="field"><span>School or organisation name</span><input name="school" required autocomplete="organization"></label>
             <label class="field"><span>District / town</span><input name="location" required autocomplete="address-level2"></label>
-            <label class="field"><span>Contact person</span><input name="contact" required autocomplete="name"></label>
+            <label class="field"><span>Authorized contact person</span><input name="contact" required autocomplete="name"></label>
             <label class="field"><span>Phone or email</span><input name="contactDetails" required autocomplete="tel"></label>
             <label class="field"><span>Approximate number of learners</span><input name="learners" type="number" min="1" required></label>
-            <label class="field"><span>What support is most useful?</span><select name="support" required><option value="">Choose one</option><option>Suitable computer donations</option><option>Basic computer skills training</option><option>Computer-lab setup or maintenance support</option><option>A combination of support</option></select></label>
-            <label class="field full"><span>Tell us about your current equipment and need</span><textarea name="details" required placeholder="For example: number of working computers, available room, teacher support, or the skills learners need most."></textarea></label>
+            <label class="field"><span>Number of working computers currently</span><input name="workingComputers" type="number" min="0" required placeholder="0"></label>
+            <label class="field full"><span>Room &amp; power readiness</span><input name="readiness" placeholder="e.g. Dedicated room with door lock, grid power / solar stability"></label>
+            <label class="field full"><span>What equipment is needed most?</span><textarea name="details" required placeholder="For example: 10 desktop computers for primary literacy, power surge protector, teacher basic ICT training."></textarea></label>
           </div>
-          <button class="button primary" type="submit"><i data-lucide="message-circle" aria-hidden="true"></i> Send school request on WhatsApp</button>
+          <button class="button primary" type="submit"><i data-lucide="message-circle" aria-hidden="true"></i> Submit confidential request on WhatsApp</button>
           <p class="form-note">Please do not include learner names, confidential records, passwords, or payment information.</p>
         </form>
       </div>
     </section>
 
+    <!-- 6. Offer Equipment / Donor Coordination (Guide Section 6) -->
     <section id="equipment-donation">
       <div class="container grid-2">
         <div class="card">
-          <p class="eyebrow"><i data-lucide="monitor-up" aria-hidden="true"></i> Equipment donations</p>
-          <h2>Have a suitable computer to give?</h2>
-          <p class="lead">We welcome conversations about workable laptops, desktops, monitors, keyboards, mice, and basic networking equipment. Each item is assessed before it is accepted or matched with a school.</p>
-          <a class="button primary" href="https://wa.me/256708262179?text=Hello%20MosesTechFix%20Community%2C%20I%20would%20like%20to%20discuss%20donating%20suitable%20computer%20equipment.%20The%20item(s)%20I%20have%20are%3A" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle" aria-hidden="true"></i> Discuss equipment donation</a>
+          <p class="eyebrow"><i data-lucide="shopping-cart" aria-hidden="true"></i> Buy New Equipment</p>
+          <h2>Buy an item directly through a supplier.</h2>
+          <p class="lead">If you want to sponsor new equipment, you can purchase directly from a vetted computer supplier. Purchases stay between you and the supplier; MosesTechFix coordinates delivery inspection and school lab setup.</p>
+          <a class="button primary" href="#current-needs"><i data-lucide="search" aria-hidden="true"></i> Browse schools to buy an item</a>
         </div>
         <div class="card">
-          <p class="eyebrow"><i data-lucide="bar-chart-3" aria-hidden="true"></i> Impact updates</p>
-          <h2>We will report facts, not promises.</h2>
-          <p class="lead">As the first school activities are completed, this page will share the school supported, type of activity, devices placed, learners reached, and approved photos. No impact figures are published before work is complete.</p>
-          <a class="button ghost" href="index.html#contact"><i data-lucide="mail" aria-hidden="true"></i> Contact MosesTechFix</a>
+          <p class="eyebrow"><i data-lucide="monitor-up" aria-hidden="true"></i> Refurbished Equipment</p>
+          <h2>Have suitable computers to give?</h2>
+          <p class="lead">We welcome working laptops, desktops, monitors, keyboards, mice, and power accessories. We test every unit, install educational software, and match it with a verified school.</p>
+          <a class="button ghost" href="https://wa.me/256708262179?text=Hello%20MosesTechFix%20Community%2C%20I%20have%20refurbished%20computer%20equipment%20to%20offer%20for%20schools.%20Items%20I%20have%3A" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle" aria-hidden="true"></i> Discuss equipment offer on WhatsApp</a>
         </div>
       </div>
     </section>
@@ -334,14 +365,133 @@
     <div class="container">
       <div class="footer-grid">
         <div><h3>MosesTechFix Solutions</h3><p>Practical IT support, training, and community digital-access work in Uganda.</p></div>
-        <div><h4>Explore</h4><ul class="footer-list"><li><a href="services.html">Services</a></li><li><a href="index.html#courses">Courses</a></li><li><a href="community.html">MosesTechFix Community</a></li><li><a href="service-request.html">Request service</a></li></ul></div>
+        <div><h4>Explore</h4><ul class="footer-list"><li><a href="index.html">Home</a></li><li><a href="community.html">School Computer Needs</a></li><li><a href="services.html">Services</a></li><li><a href="index.html#courses">Courses</a></li><li><a href="service-request.html">Request service</a></li></ul></div>
         <div><h4>Contact</h4><ul class="footer-list"><li><a href="tel:+256708262179">+256 708 262 179</a></li><li><a href="mailto:mosestechfixsolutions@gmail.com">mosestechfixsolutions@gmail.com</a></li><li>Nansana, Kampala, Uganda</li></ul></div>
       </div>
       <div class="footer-bottom">&copy; 2026 MosesTechFix Solutions. All rights reserved.</div>
     </div>
   </footer>
 
-  <!-- Interactive School Details & Funder Pledge Modal -->
+  <!-- Modal 1: Section 6 Dual Donor Offer Modal (Buy New / Refurbished) -->
+  <dialog class="directory-modal" id="donor-offer-modal" aria-labelledby="donor-modal-title">
+    <div class="modal-dialog-panel">
+      <button type="button" class="modal-close-btn" id="donor-modal-close-btn" aria-label="Close modal">
+        <i data-lucide="x" style="width:20px;height:20px;"></i>
+      </button>
+
+      <div>
+        <span class="school-verification-tag" style="margin-bottom:0.4rem;">
+          <i data-lucide="shield-check" style="width:12px;height:12px;"></i> Donor Coordination
+        </span>
+        <h2 id="donor-modal-title" style="font-size:1.45rem;font-weight:800;margin:0 0 0.35rem;">
+          Support <span id="donor-modal-school-name" style="color:var(--brand,#24d3ee);">School</span>
+        </h2>
+        <p style="font-size:0.85rem;color:var(--muted,#91a9c0);margin:0;">
+          <i data-lucide="map-pin" style="width:13px;height:13px;"></i> <span id="donor-modal-school-location">Location</span> &middot; <span id="donor-modal-school-goal">Goal</span>
+        </p>
+      </div>
+
+      <!-- Section 6 Dual Pathway Selector -->
+      <div class="donor-pathway-tabs">
+        <button type="button" class="donor-tab-btn active" id="tab-pathway-buy">
+          <i data-lucide="shopping-cart" style="width:16px;height:16px;"></i> I will buy this item
+        </button>
+        <button type="button" class="donor-tab-btn" id="tab-pathway-refurb">
+          <i data-lucide="laptop" style="width:16px;height:16px;"></i> I have refurbished equipment
+        </button>
+      </div>
+
+      <!-- Pathway A: Buy New Item Form -->
+      <div id="panel-pathway-buy">
+        <div class="donor-trust-notice" style="margin-bottom:1rem;">
+          <strong>Direct Supplier Coordination:</strong> You purchase directly through a verified computer hardware vendor. MosesTechFix inspects delivery and coordinates school installation. No cash is collected on this website.
+        </div>
+        <form class="donor-form-grid" id="form-donor-buy">
+          <label class="donor-field">
+            <span>Which listed item will you buy?</span>
+            <select id="buy-item-select" required></select>
+          </label>
+          <label class="donor-field">
+            <span>Quantity</span>
+            <input type="number" id="buy-quantity-input" min="1" value="1" required>
+          </label>
+          <label class="donor-field">
+            <span>Your name or organisation</span>
+            <input type="text" id="buy-name-input" placeholder="e.g. Sarah K. or Alumni Group" required>
+          </label>
+          <label class="donor-field">
+            <span>Preferred contact method (Phone / WhatsApp / Email)</span>
+            <input type="text" id="buy-contact-input" placeholder="+256... or email" required>
+          </label>
+          <label class="donor-field">
+            <span>Preferred delivery / coordination plan</span>
+            <input type="text" id="buy-delivery-input" placeholder="e.g. Supplier delivery to school / MosesTechFix inspection first" required>
+          </label>
+          <button type="submit" class="button primary" style="min-height:48px;margin-top:0.5rem;">
+            <i data-lucide="message-circle" aria-hidden="true"></i> Submit Purchase Coordination on WhatsApp ↗
+          </button>
+        </form>
+      </div>
+
+      <!-- Pathway B: Refurbished Equipment Form -->
+      <div id="panel-pathway-refurb" style="display:none;">
+        <div class="donor-trust-notice" style="margin-bottom:1rem;">
+          <strong>Equipment Suitability Check:</strong> MosesTechFix inspects, tests, and wipes donated hardware before matching it with the school.
+        </div>
+        <form class="donor-form-grid" id="form-donor-refurb">
+          <label class="donor-field">
+            <span>Equipment type</span>
+            <select id="refurb-type-select" required>
+              <option value="Desktop Computer(s)">Desktop Computer(s)</option>
+              <option value="Laptop(s)">Laptop(s)</option>
+              <option value="Computer Monitor(s)">Computer Monitor(s)</option>
+              <option value="Keyboards / Mice">Keyboards / Mice</option>
+              <option value="Power Surge Protector / UPS">Power Surge Protector / UPS</option>
+              <option value="Networking Equipment">Networking Equipment</option>
+            </select>
+          </label>
+          <label class="donor-field">
+            <span>Make / model (if known)</span>
+            <input type="text" id="refurb-model-input" placeholder="e.g. Dell OptiPlex / HP EliteBook">
+          </label>
+          <label class="donor-field">
+            <span>Quantity</span>
+            <input type="number" id="refurb-quantity-input" min="1" value="1" required>
+          </label>
+          <label class="donor-field">
+            <span>Working condition</span>
+            <select id="refurb-condition-select" required>
+              <option value="Tested and working well">Tested and working well</option>
+              <option value="Working but needs operating system / software setup">Working but needs software setup</option>
+              <option value="Untested / Needs minor repair">Untested / Needs minor repair</option>
+            </select>
+          </label>
+          <label class="donor-field">
+            <span>Included accessories</span>
+            <input type="text" id="refurb-accessories-input" placeholder="e.g. Power chargers, VGA/HDMI cables, mice">
+          </label>
+          <label class="donor-field">
+            <span>Your location</span>
+            <input type="text" id="refurb-location-input" placeholder="e.g. Kampala, Wakiso, Diaspora (UK/USA)" required>
+          </label>
+          <label class="donor-field">
+            <span>Your name &amp; contact info</span>
+            <input type="text" id="refurb-name-input" placeholder="Name and Phone / WhatsApp" required>
+          </label>
+          <input type="hidden" id="refurb-contact-input" value="Via WhatsApp">
+          <label class="donor-field">
+            <span>Delivery plan</span>
+            <input type="text" id="refurb-delivery-input" placeholder="e.g. Can drop off in Kampala / Need pickup" required>
+          </label>
+          <button type="submit" class="button primary" style="min-height:48px;margin-top:0.5rem;">
+            <i data-lucide="message-circle" aria-hidden="true"></i> Submit Equipment Offer on WhatsApp ↗
+          </button>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Modal 2: Full School Details Modal -->
   <dialog class="directory-modal" id="school-modal" aria-labelledby="modal-school-title">
     <div class="modal-dialog-panel">
       <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
@@ -352,6 +502,9 @@
         <div class="modal-badges">
           <span class="school-status-pill status-in-progress" id="modal-school-status-badge">
             <i data-lucide="clock" style="width:12px;height:12px;"></i> IN PROGRESS
+          </span>
+          <span class="school-verification-tag">
+            <i data-lucide="shield-check" style="width:12px;height:12px;"></i> Verified Need
           </span>
         </div>
         <h2 class="modal-title" id="modal-school-title">School Name</h2>
@@ -383,27 +536,27 @@
       </div>
 
       <div>
-        <h4 class="modal-section-title"><i data-lucide="file-text"></i> About School &amp; Computer Lab Needs</h4>
+        <h4 class="modal-section-title"><i data-lucide="file-text"></i> Needs &amp; Current Lab Status</h4>
         <div class="modal-details-box">
           <p id="modal-school-summary" style="margin-bottom:0.65rem;"></p>
-          <p><strong style="color:var(--ink,#eef7ff);">Equipment Requirements:</strong> <span id="modal-school-needs"></span></p>
+          <p><strong style="color:var(--ink,#eef7ff);">Exact Requirements:</strong> <span id="modal-school-needs"></span></p>
         </div>
       </div>
 
       <div>
-        <h4 class="modal-section-title"><i data-lucide="heart-handshake"></i> Verified Funders &amp; Donors</h4>
+        <h4 class="modal-section-title"><i data-lucide="heart-handshake"></i> Verified Funders &amp; Previous Contributions</h4>
         <div class="modal-funders-list" id="modal-school-funders-list">
           <!-- Populated dynamically -->
         </div>
       </div>
 
       <div class="modal-cta-group">
-        <a id="modal-whatsapp-pledge-btn" href="#" target="_blank" rel="noopener noreferrer" class="button primary modal-funder-btn">
-          <i data-lucide="message-circle"></i> Pledge Equipment or Funding on WhatsApp ↗
-        </a>
-        <a href="#equipment-donation" class="button ghost" onclick="document.getElementById('school-modal')?.close();" style="font-size:0.85rem;min-height:38px;">
-          Learn How Equipment Donations Work ↓
-        </a>
+        <button type="button" class="button primary modal-funder-btn" onclick="document.getElementById('school-modal')?.close(); openDonorModal(currentSelectedSchool.id, 'buy');">
+          <i data-lucide="shopping-cart"></i> Buy an Item for This School ↗
+        </button>
+        <button type="button" class="button ghost modal-funder-btn" onclick="document.getElementById('school-modal')?.close(); openDonorModal(currentSelectedSchool.id, 'refurbished');">
+          <i data-lucide="laptop"></i> Offer Refurbished Hardware ↗
+        </button>
       </div>
     </div>
   </dialog>
@@ -416,15 +569,16 @@
       event.preventDefault();
       const data = new FormData(schoolRequestForm);
       const message = [
-        "Hello MosesTechFix Community, I would like to submit a school support request.",
+        "Hello MosesTechFix Community, I would like to submit a private school support request.",
         "",
         `School / organisation: ${data.get("school")}`,
         `District / town: ${data.get("location")}`,
-        `Contact person: ${data.get("contact")}`,
+        `Authorized contact: ${data.get("contact")}`,
         `Phone or email: ${data.get("contactDetails")}`,
         `Learners: ${data.get("learners")}`,
-        `Support requested: ${data.get("support")}`,
-        `Current equipment and need: ${data.get("details")}`
+        `Working computers currently: ${data.get("workingComputers")}`,
+        `Room and power readiness: ${data.get("readiness")}`,
+        `Equipment needed most: ${data.get("details")}`
       ].join("\n");
       window.open(`https://wa.me/256708262179?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
     });

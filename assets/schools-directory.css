@@ -1,10 +1,61 @@
-/* MosesTechFix Community - Schools Directory & Funder Progress Tracker Styles
-   Responsive 3-column grid, search/filter controls, animated progress bars, and modal */
+/* MosesTechFix Community - School Computer Support System Styles
+   Standards-compliant School Need Cards, Dual Donor Pathways, Responsive Grid, and Home Navigation */
 
 .schools-directory-section {
   position: relative;
   padding: clamp(48px, 6vw, 84px) 0;
   border-bottom: 1px solid var(--line);
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.88rem;
+  color: var(--muted, #91a9c0);
+}
+
+.breadcrumb-bar a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--brand, #24d3ee);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.breadcrumb-bar a:hover {
+  color: #72e9ff;
+  text-decoration: underline;
+}
+
+.breadcrumb-separator {
+  opacity: 0.5;
+}
+
+/* Header Home Button */
+.nav-home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 40px;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(36, 211, 238, 0.4);
+  background: rgba(36, 211, 238, 0.08);
+  color: var(--brand, #24d3ee) !important;
+  font-weight: 800;
+  font-size: 0.88rem;
+  transition: all 180ms ease;
+}
+
+.nav-home-btn:hover {
+  background: var(--brand, #24d3ee);
+  color: #05101a !important;
+  transform: translateY(-1px);
 }
 
 /* Impact Metrics Overview Bar */
@@ -279,10 +330,6 @@
   padding: 0;
 }
 
-.reset-filters-btn:hover {
-  color: #72e9ff;
-}
-
 /* Schools Grid */
 .schools-grid {
   display: grid;
@@ -291,69 +338,36 @@
   margin-top: 1rem;
 }
 
-/* School Card */
-.school-card {
+/* Section 4 Standard School Need Card */
+.standard-school-card {
   display: flex;
   flex-direction: column;
   border: 1px solid var(--line);
   border-radius: var(--radius, 18px);
-  background: var(--panel, rgba(11, 27, 45, 0.86));
-  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.24);
-  overflow: hidden;
+  background: var(--panel, rgba(11, 27, 45, 0.88));
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.26);
+  padding: 1.35rem;
+  gap: 1rem;
+  position: relative;
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
 
-.school-card:hover {
+.standard-school-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.36), 0 0 20px rgba(36, 211, 238, 0.12);
-  border-color: rgba(36, 211, 238, 0.35);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.4), 0 0 24px rgba(36, 211, 238, 0.14);
+  border-color: rgba(36, 211, 238, 0.4);
 }
 
-/* Card Visual Header */
-.school-card-media {
-  position: relative;
-  height: 150px;
-  background: linear-gradient(135deg, #091a2b 0%, #0d2a45 100%);
+.standard-school-card.is-fulfilled {
+  border-color: rgba(77, 226, 179, 0.35);
+  background: rgba(8, 28, 38, 0.9);
+}
+
+.card-top-bar {
   display: flex;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.school-card-pattern {
-  position: absolute;
-  inset: 0;
-  background-image: 
-    radial-gradient(circle at 10% 20%, rgba(36, 211, 238, 0.15) 0%, transparent 40%),
-    linear-gradient(rgba(36, 211, 238, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(36, 211, 238, 0.05) 1px, transparent 1px);
-  background-size: 100% 100%, 20px 20px, 20px 20px;
-}
-
-.school-card-icon-emblem {
-  position: relative;
-  z-index: 1;
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
-  background: rgba(7, 20, 34, 0.85);
-  border: 1px solid rgba(114, 226, 255, 0.25);
-  display: grid;
-  place-items: center;
-  color: var(--brand, #24d3ee);
-  font-size: 1.75rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-}
-
-.school-badge-container {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-  z-index: 2;
+  gap: 0.5rem;
 }
 
 .school-status-pill {
@@ -366,7 +380,6 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .status-urgent {
@@ -387,88 +400,117 @@
   border: 1px solid rgba(77, 226, 179, 0.4);
 }
 
-.school-region-pill {
-  padding: 0.25rem 0.55rem;
-  border-radius: 6px;
-  background: rgba(5, 16, 26, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: var(--ink-2, #c7d8ea);
+.school-verification-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   font-size: 0.72rem;
   font-weight: 700;
-  backdrop-filter: blur(8px);
+  color: var(--green, #4de2b3);
+  background: rgba(77, 226, 179, 0.08);
+  padding: 0.22rem 0.55rem;
+  border-radius: 6px;
+  border: 1px solid rgba(77, 226, 179, 0.25);
 }
 
-/* Card Body */
-.school-card-body {
-  padding: 1.25rem;
+.standard-card-header {
   display: flex;
   flex-direction: column;
-  flex: 1 1 auto;
-  gap: 0.85rem;
+  gap: 0.25rem;
 }
 
-.school-card-title {
-  font-size: 1.22rem;
-  font-weight: 700;
+.school-title-text {
+  font-size: 1.25rem;
+  font-weight: 800;
   color: var(--ink, #eef7ff);
   line-height: 1.25;
   margin: 0;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.45rem;
 }
 
-.school-meta-line {
-  display: flex;
+.school-location-text {
+  display: inline-flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.35rem;
   font-size: 0.85rem;
   color: var(--muted, #91a9c0);
+  margin: 0;
 }
 
-.school-meta-line span {
+/* Section 4 Standard Specifications Matrix */
+.school-spec-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0.85rem;
+  border-radius: 12px;
+  background: rgba(6, 18, 30, 0.65);
+  border: 1px solid rgba(114, 226, 255, 0.12);
+}
+
+.spec-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.84rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.spec-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.spec-row dt {
+  color: var(--muted, #91a9c0);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
 }
 
-.school-summary-text {
-  font-size: 0.88rem;
-  color: var(--ink-2, #c7d8ea);
-  line-height: 1.5;
+.spec-row dt i {
+  color: var(--brand, #24d3ee);
+}
+
+.spec-row dd {
   margin: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  color: var(--ink-2, #c7d8ea);
+  line-height: 1.45;
 }
 
-/* Progress Box inside Card */
-.school-progress-box {
-  padding: 0.85rem 1rem;
-  border-radius: 12px;
-  background: rgba(6, 18, 30, 0.65);
-  border: 1px solid rgba(114, 226, 255, 0.12);
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
+.spec-row.highlight {
+  background: rgba(36, 211, 238, 0.06);
+  padding: 0.65rem;
+  border-radius: 8px;
+  border: 1px dashed rgba(36, 211, 238, 0.25);
 }
 
-.progress-header-row {
+.spec-row.highlight dt i {
+  color: var(--gold, #ffc857);
+}
+
+.spec-row.highlight dd strong {
+  color: var(--ink, #eef7ff);
+  font-size: 0.88rem;
+}
+
+.spec-progress-label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.84rem;
-  font-weight: 700;
+  margin-bottom: 0.35rem;
 }
 
-.progress-goal-label {
-  color: var(--ink-2, #c7d8ea);
-}
-
-.progress-ratio-label {
-  color: var(--brand, #24d3ee);
+.spec-pct-badge {
   font-family: "Space Grotesk", sans-serif;
+  font-weight: 800;
+  color: var(--brand, #24d3ee);
+  font-size: 0.88rem;
 }
 
 .card-progress-bar {
@@ -490,42 +532,45 @@
   background: var(--green, #4de2b3);
 }
 
-/* Funder attribution info */
-.school-funder-tag {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  font-size: 0.78rem;
-  color: var(--muted, #91a9c0);
-  background: rgba(36, 211, 238, 0.05);
-  border-radius: 8px;
-  padding: 0.45rem 0.65rem;
-  border: 1px dashed rgba(36, 211, 238, 0.18);
-}
-
-.school-funder-tag i {
-  color: var(--gold, #ffc857);
-  width: 14px;
-  height: 14px;
-  flex-shrink: 0;
-}
-
-.school-funder-tag strong {
-  color: var(--ink-2, #c7d8ea);
-}
-
-/* Card Action Footer */
-.school-card-footer {
+/* Card Actions */
+.standard-card-actions {
   margin-top: auto;
-  padding-top: 0.75rem;
   display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.donor-actions-duo {
+  display: flex;
+  flex-direction: column;
   gap: 0.5rem;
 }
 
-.school-card-footer .button {
+.donor-actions-duo .button {
+  min-height: 42px;
+  font-size: 0.85rem;
+  padding: 0.65rem 0.85rem;
+  justify-content: center;
   width: 100%;
-  min-height: 44px;
-  font-size: 0.88rem;
+}
+
+.text-link-btn {
+  background: none;
+  border: none;
+  color: var(--muted, #91a9c0);
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.35rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  transition: color 150ms ease;
+}
+
+.text-link-btn:hover {
+  color: var(--brand, #24d3ee);
 }
 
 /* Empty State */
@@ -637,15 +682,15 @@
   padding: 0.85rem 1.75rem;
 }
 
-/* School Details & Funder Pledge Modal */
+/* Modals */
 .directory-modal {
   position: fixed;
   inset: 0;
   width: 100%;
   height: 100%;
   border: none;
-  background: rgba(4, 11, 18, 0.82);
-  backdrop-filter: blur(10px);
+  background: rgba(4, 11, 18, 0.85);
+  backdrop-filter: blur(12px);
   display: none;
   align-items: center;
   justify-content: center;
@@ -670,7 +715,7 @@
   padding: clamp(1.5rem, 3vw, 2.25rem);
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
   color: var(--ink, #eef7ff);
 }
 
@@ -695,144 +740,168 @@
   color: var(--ink, #eef7ff);
 }
 
-.modal-header {
+/* Section 6 Dual Donor Pathway Tabs inside Modal */
+.donor-pathway-tabs {
   display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-  padding-right: 2.5rem;
-}
-
-.modal-badges {
-  display: flex;
-  align-items: center;
   gap: 0.5rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.75rem;
 }
 
-.modal-title {
-  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
-  font-weight: 800;
-  margin: 0;
-  line-height: 1.2;
-}
-
-.modal-meta-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  font-size: 0.9rem;
-  color: var(--muted, #91a9c0);
-}
-
-.modal-meta-item {
+.donor-tab-btn {
+  flex: 1;
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-}
-
-.modal-progress-card {
-  padding: 1.25rem;
-  border-radius: 14px;
-  background: rgba(6, 17, 28, 0.85);
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
   border: 1px solid var(--line);
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--ink-2, #c7d8ea);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 180ms ease;
 }
 
-.modal-progress-stats {
+.donor-tab-btn:hover {
+  border-color: var(--brand, #24d3ee);
+  color: var(--brand, #24d3ee);
+}
+
+.donor-tab-btn.active {
+  background: rgba(36, 211, 238, 0.15);
+  border-color: var(--brand, #24d3ee);
+  color: var(--brand, #24d3ee);
+  box-shadow: 0 4px 16px rgba(36, 211, 238, 0.2);
+}
+
+.donor-form-grid {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.donor-field {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.88rem;
+}
+
+.donor-field span {
+  font-weight: 700;
+  color: var(--ink-2, #c7d8ea);
+}
+
+.donor-field input,
+.donor-field select,
+.donor-field textarea {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: rgba(5, 16, 26, 0.85);
+  color: var(--ink, #eef7ff);
+  font-size: 0.92rem;
+  box-sizing: border-box;
+}
+
+.donor-field input:focus,
+.donor-field select:focus,
+.donor-field textarea:focus {
+  border-color: var(--brand, #24d3ee);
+  outline: none;
+}
+
+.donor-trust-notice {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: rgba(77, 226, 179, 0.08);
+  border: 1px solid rgba(77, 226, 179, 0.25);
+  font-size: 0.82rem;
+  color: var(--ink-2, #c7d8ea);
+  line-height: 1.45;
+}
+
+.donor-trust-notice strong {
+  color: var(--green, #4de2b3);
+}
+
+/* Unique Homepage Featured Section */
+.homepage-school-feature-section {
+  padding: clamp(40px, 5vw, 64px) 0;
+  background: 
+    radial-gradient(circle at 10% 50%, rgba(36, 211, 238, 0.12), transparent 28rem),
+    linear-gradient(180deg, #06101c 0%, #071929 100%);
+  border-bottom: 1px solid rgba(114, 226, 255, 0.16);
+  position: relative;
+}
+
+.homepage-school-feature-card {
+  border: 1px solid rgba(36, 211, 238, 0.35);
+  border-radius: var(--radius, 22px);
+  background: rgba(11, 27, 45, 0.85);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 30px rgba(36, 211, 238, 0.12);
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  display: grid;
+  grid-template-columns: 1.25fr 0.85fr;
   align-items: center;
+  gap: 2.5rem;
 }
 
-.modal-stat-box {
+.feature-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(36, 211, 238, 0.12);
+  border: 1px solid rgba(36, 211, 238, 0.35);
+  color: var(--brand, #24d3ee);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.feature-stats-matrix {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.feature-stat-item {
+  padding: 0.75rem;
+  border-radius: 10px;
+  background: rgba(5, 16, 26, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   flex-direction: column;
 }
 
-.modal-stat-box span {
-  font-size: 0.76rem;
+.feature-stat-item span {
+  font-size: 0.72rem;
   color: var(--muted, #91a9c0);
   text-transform: uppercase;
 }
 
-.modal-stat-box strong {
+.feature-stat-item strong {
   font-size: 1.35rem;
   font-family: "Space Grotesk", sans-serif;
   color: var(--ink, #eef7ff);
 }
 
-.modal-section-title {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--ink, #eef7ff);
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-}
-
-.modal-section-title i {
-  color: var(--brand, #24d3ee);
-  width: 18px;
-  height: 18px;
-}
-
-.modal-details-box {
-  padding: 1rem;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 0.92rem;
-  line-height: 1.6;
-  color: var(--ink-2, #c7d8ea);
-}
-
-.modal-funders-list {
+.feature-interactive-box {
+  border: 1px solid rgba(114, 226, 255, 0.2);
+  border-radius: 16px;
+  background: rgba(6, 18, 30, 0.8);
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-}
-
-.funder-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.65rem 0.85rem;
-  border-radius: 8px;
-  background: rgba(36, 211, 238, 0.05);
-  border: 1px solid rgba(36, 211, 238, 0.12);
-  font-size: 0.88rem;
-}
-
-.funder-name {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
-  color: var(--ink, #eef7ff);
-}
-
-.funder-badge {
-  font-size: 0.74rem;
-  color: var(--gold, #ffc857);
-  background: rgba(255, 200, 87, 0.12);
-  padding: 0.2rem 0.5rem;
-  border-radius: 999px;
-  font-weight: 700;
-}
-
-.modal-cta-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
-}
-
-.modal-funder-btn {
-  width: 100%;
-  min-height: 50px;
-  font-size: 0.98rem;
+  gap: 1rem;
 }
 
 /* Responsive adjustments */
@@ -842,6 +911,10 @@
   }
   .directory-metrics-bar {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .homepage-school-feature-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 
@@ -872,5 +945,8 @@
   }
   .modal-dialog-panel {
     padding: 1.25rem;
+  }
+  .donor-pathway-tabs {
+    flex-direction: column;
   }
 }
