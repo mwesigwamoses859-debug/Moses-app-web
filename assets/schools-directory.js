@@ -25,7 +25,6 @@ const schoolsData = [
     isCurrentProject: true,
     urgency: "urgent",
     leadPerson: "Bursar (Private coordination via MosesTechFix)",
-    contactDetails: "Phone: 0777370979 / Email: ntmary99@gmail.com",
     summary: "St. Kizito Preparatory School Makenke, located in Nangabo, Wakiso District, seeks to improve access to digital learning for its 75 pupils. Our school needs additional computer equipment to support practical ICT lessons and help learners develop essential computer skills. We are seeking a completely free donation of 10–20 desktop or laptop computers, including refurbished computers in good working condition. Where possible, we would also appreciate computer accessories, educational software and basic ICT training for teachers. This support would help our pupils access digital educational resources and prepare for a technology-driven future.",
     itemsList: [
       { name: "Desktop or Laptop Computers (Core i3, 8GB RAM, SSD)", needed: 15, received: 0 },
@@ -94,7 +93,7 @@ function renderActiveProjectShowcase() {
       <div class="active-campaign-topbar">
         <span class="active-pulse-badge">
           <span class="pulse-dot"></span>
-          ${isFulfilled ? '✅ PROJECT COMPLETED & DELIVERED' : '🔴 CURRENT ACTIVE PROJECT · HELP THIS SCHOOL FIRST'}
+          ${isFulfilled ? 'PROJECT COMPLETED & DELIVERED' : 'CURRENT SCHOOL DRIVE'}
         </span>
         <span class="active-verified-badge">
           <i data-lucide="shield-check" style="width:16px;height:16px;"></i> Verified School Request
@@ -169,7 +168,7 @@ function renderActiveProjectShowcase() {
         <div class="active-guarantee-note">
           <i data-lucide="info" style="width:18px;height:18px;color:#24d3ee;flex-shrink:0;"></i>
           <span>
-            <strong>Our One-School Commitment:</strong> We focus all community support on this school until 100% completed. Donors do not pick random schools; helping this active project ensures complete lab delivery. Once equipped, this school is marked <strong>Complete</strong> and the next verified school will open.
+            <strong>Our One-School Commitment:</strong> We focus all community support on this school until 100% completed. Donors do not pick random schools; the aim is to complete its lab before opening another drive. Once equipped, this school is marked <strong>Complete</strong> and the next verified school will open.
           </span>
         </div>
       </div>
@@ -241,32 +240,23 @@ function openDonorModal(schoolId, defaultPathway = "buy") {
  * Switch Donor Modal Tabs
  */
 function switchDonorPathway(pathway) {
-  const tabBuy = document.getElementById("tab-pathway-buy");
-  const tabRefurb = document.getElementById("tab-pathway-refurb");
-  const formBuy = document.getElementById("form-donor-buy");
-  const formRefurb = document.getElementById("form-donor-refurb");
-
-  if (pathway === "buy") {
-    tabBuy?.classList.add("active");
-    tabRefurb?.classList.remove("active");
-    if (formBuy) formBuy.style.display = "flex";
-    if (formRefurb) formRefurb.style.display = "none";
-  } else {
-    tabBuy?.classList.remove("active");
-    tabRefurb?.classList.add("active");
-    if (formBuy) formBuy.style.display = "none";
-    if (formRefurb) formRefurb.style.display = "flex";
-  }
+  const isBuy = pathway === "buy";
+  [["buy", isBuy], ["refurb", !isBuy]].forEach(([key, selected]) => {
+    const tab = document.getElementById(`tab-pathway-${key}`);
+    const panel = document.getElementById(`panel-pathway-${key}`);
+    tab?.classList.toggle("active", selected);
+    tab?.setAttribute("aria-selected", String(selected));
+    if (tab) tab.tabIndex = selected ? 0 : -1;
+    if (panel) { panel.hidden = !selected; panel.style.display = selected ? "" : "none"; }
+  });
 }
 
 /**
  * Setup modal listeners (close on click backdrop or Esc)
  */
 function setupModalEvents() {
-  const detailsModal = document.getElementById("school-modal");
   const donorModal = document.getElementById("donor-offer-modal");
 
-  const closeDetailsBtn = document.getElementById("modal-close-btn");
   const closeDonorBtn = document.getElementById("donor-modal-close-btn");
 
   const tabBuy = document.getElementById("tab-pathway-buy");
@@ -274,6 +264,13 @@ function setupModalEvents() {
 
   if (tabBuy) tabBuy.addEventListener("click", () => switchDonorPathway("buy"));
   if (tabRefurb) tabRefurb.addEventListener("click", () => switchDonorPathway("refurbished"));
+  [tabBuy, tabRefurb].forEach((tab) => tab?.addEventListener("keydown", (event) => {
+    if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const showBuy = event.key === "Home" || (event.key !== "End" && tab === tabRefurb);
+    switchDonorPathway(showBuy ? "buy" : "refurbished");
+    (showBuy ? tabBuy : tabRefurb)?.focus();
+  }));
 
   function closeModal(m) {
     if (!m) return;
@@ -285,10 +282,9 @@ function setupModalEvents() {
     document.body.style.overflow = "";
   }
 
-  if (closeDetailsBtn) closeDetailsBtn.addEventListener("click", () => closeModal(detailsModal));
   if (closeDonorBtn) closeDonorBtn.addEventListener("click", () => closeModal(donorModal));
 
-  [detailsModal, donorModal].forEach(m => {
+  [donorModal].forEach(m => {
     if (!m) return;
     m.addEventListener("click", (e) => {
       if (e.target === m) closeModal(m);
@@ -297,7 +293,6 @@ function setupModalEvents() {
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
-      if (detailsModal?.hasAttribute("open")) closeModal(detailsModal);
       if (donorModal?.hasAttribute("open")) closeModal(donorModal);
     }
   });

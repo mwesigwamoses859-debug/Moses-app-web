@@ -9,21 +9,31 @@
   <title>Leave a Google Review | MosesTechFix Solutions</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/pages.css">
-  <link rel="stylesheet" href="assets/tech-theme.css?v=type1">
-  <link rel="stylesheet" href="assets/ai-pet.css">
-  <script defer src="assets/analytics.js"></script>
+  <link rel="stylesheet" href="assets/ai-pet.css?v=20261022c">
+  <script defer src="assets/analytics.js?v=20261022c"></script>
+  <link rel="stylesheet" href="assets/tech-theme.css?v=20261022c">
+  <link rel="stylesheet" href="assets/site-chrome.css?v=20261022c">
+  <script defer src="assets/home.js?v=20261022c"></script>
+  <link rel="icon" href="assets/mosestechfix-logo.jpg">
+  <meta property="og:title" content="Leave a Google Review | MosesTechFix Solutions">
+  <meta property="og:description" content="Share an honest Google review about your experience with MosesTechFix Solutions in Kampala, Uganda.">
+  <meta property="og:url" content="https://mosestechfixsolution.com/leave-review">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#06101c">
 </head>
-<body>
-  <header class="site-header"><div class="container"><nav class="nav" aria-label="Main navigation"><a class="brand" href="index.html"><img src="assets/mosestechfix-logo.jpg" alt="MosesTechFix Solutions logo"><span>MosesTechFix <small>IT services, training, and websites</small></span></a><ul class="nav-links">
-          <li><a href="services.html">Services</a></li>
-          <li><a href="index.html#courses">Courses</a></li>
-          <li><a href="community.html">Community</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="service-request.html">Request service</a></li>
-        </ul></nav></div></header>
-  <main>
+<body class="inner-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-top" id="top">
+    <div class="shell nav">
+      <a class="brand" href="/" aria-label="MosesTechFix Solutions home"><strong>MosesTechFix<span>.</span></strong><small>SOLUTIONS</small></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">Menu <span aria-hidden="true">☰</span></button>
+      <nav class="nav-links" id="main-navigation" aria-label="Main navigation"><a href="services.html">Services</a><a href="website-development.html">Websites</a><a href="/#courses">Training</a><a href="community.html">School labs</a><a href="/#about">About</a><a href="/#contact">Contact</a></nav>
+      <a class="button nav-cta" href="service-request.html">Request a service <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main id="main">
     <section class="page-hero review-hero">
       <div class="container">
         <p class="eyebrow"><i data-lucide="star" aria-hidden="true"></i> Customer feedback</p>
@@ -35,13 +45,21 @@
     <section>
       <div class="container">
         <div class="grid-2">
-          <article class="card"><span class="icon gold"><i data-lucide="message-square-heart" aria-hidden="true"></i></span><h2>Helpful review ideas</h2><p>You can briefly mention the service you received, what was handled well and whether you would recommend MosesTechFix. Please only share your genuine experience.</p><ul class="check-list"><li><i data-lucide="check" aria-hidden="true"></i> The service or training you received</li><li><i data-lucide="check" aria-hidden="true"></i> Communication and response time</li><li><i data-lucide="check" aria-hidden="true"></i> The result or problem that was resolved</li></ul></article>
-          <article class="card review-process"><span class="icon"><i data-lucide="send" aria-hidden="true"></i></span><h2>Message to send after a completed job</h2><p>MosesTechFix can copy this message and send it to a customer after successful service:</p><label for="review-message">Review request message</label><textarea id="review-message" readonly>Thank you for choosing MosesTechFix Solutions. If our service helped you, please share an honest Google review: https://mosestechfixsolution.com/leave-review</textarea><button class="button ghost" id="copy-review-message" type="button"><i data-lucide="copy" aria-hidden="true"></i> Copy message</button><p class="copy-status" id="copy-status" role="status" aria-live="polite"></p></article>
+          <article class="card"><span class="icon gold"><i data-lucide="message-square-heart" aria-hidden="true"></i></span><h2>Helpful review ideas</h2><p>You can briefly mention the service you received, what worked well, what could improve and whether you would recommend MosesTechFix. Please only share your genuine experience.</p><ul class="check-list"><li><i data-lucide="check" aria-hidden="true"></i> The service or training you received</li><li><i data-lucide="check" aria-hidden="true"></i> Communication and response time</li><li><i data-lucide="check" aria-hidden="true"></i> The result or problem that was resolved</li></ul></article>
+          <article class="card review-process"><span class="icon"><i data-lucide="send" aria-hidden="true"></i></span><h2>Share a review invitation</h2><p>Copy this invitation for a customer after a completed service. Feedback should reflect their own experience.</p><label for="review-message">Review request message</label><textarea id="review-message" readonly>Thank you for choosing MosesTechFix Solutions. Please share an honest review of your experience: https://mosestechfixsolution.com/leave-review</textarea><button class="button ghost" id="copy-review-message" type="button"><i data-lucide="copy" aria-hidden="true"></i> Copy message</button><p class="copy-status" id="copy-status" role="status" aria-live="polite"></p></article>
         </div>
       </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="container"><div class="footer-grid"><div><h3>MosesTechFix Solutions</h3><p>Practical technology help for individuals and businesses in Uganda.</p></div><div><h4>Quick links</h4><ul class="footer-list"><li><a href="services.html">Services</a></li><li><a href="website-development.html">Website package</a></li><li><a href="service-request.html">Service request</a></li></ul></div><div><h4>Contact</h4><ul class="footer-list"><li><a href="tel:+256708262179">+256 708 262 179</a></li><li><a href="mailto:mosestechfixsolutions@gmail.com">mosestechfixsolutions@gmail.com</a></li></ul></div></div><div class="footer-bottom">&copy; 2026 MosesTechFix Solutions. All rights reserved.</div></div></footer>
+  <footer class="footer"><div class="shell">
+    <div class="footer-layout">
+      <div class="footer-brand"><a class="brand" href="/"><strong>MosesTechFix<span>.</span></strong><small>SOLUTIONS</small></a><p>Practical IT support, websites<br>and digital skills in Uganda.</p><p>Kampala, Uganda</p></div>
+      <nav class="footer-col" aria-label="Services and support"><h2>Services &amp; support</h2><a href="services.html">IT services</a><a href="website-development.html">Business websites</a><a href="service-request.html">Request a service</a><a href="equipment-recommendation.html">Equipment advice</a><a href="it-procurement.html">IT procurement</a><a href="ai-support.html">Fix AI troubleshooting</a></nav>
+      <nav class="footer-col" aria-label="Explore MosesTechFix"><h2>Explore</h2><a href="/#courses">Training courses</a><a href="community.html">School computer labs</a><a href="offers.html">Packages &amp; offers</a><a href="gallery.html">Work &amp; service examples</a><a href="booking-guide.html">Booking guide</a><a href="service-area.html">Service area &amp; hours</a><a href="computer-repair-checklist-kampala.html">Computer repair checklist</a></nav>
+      <nav class="footer-col" aria-label="Contact MosesTechFix"><h2>Get in touch</h2><a href="tel:+256708262179">+256 708 262 179</a><a href="https://wa.me/256708262179">WhatsApp MosesTechFix</a><a href="mailto:mosestechfixsolutions@gmail.com">mosestechfixsolutions@gmail.com</a><a href="connect.html">WhatsApp &amp; social links</a><a href="leave-review.html">Share honest feedback</a></nav>
+    </div>
+    <div class="footer-bottom"><span>© 2026 MosesTechFix Solutions</span><nav aria-label="Policies"><a href="privacy-policy.html">Privacy</a><a href="terms-of-service.html">Service terms</a></nav></div>
+  </div></footer>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script src="assets/pages.js"></script>
   <script>
@@ -58,6 +76,6 @@
       }
     });
   </script>
-  <script src="assets/ai-pet.js"></script>
+  <script src="assets/ai-pet.js?v=20261022c"></script>
 </body>
 </html>

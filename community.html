@@ -11,18 +11,16 @@
   <meta property="og:url" content="https://mosestechfixsolution.com/community">
   <meta property="og:title" content="School Computer Needs & Labs | MosesTechFix Community">
   <meta property="og:description" content="Help a Ugandan school access computers and digital skills. Browse verified school needs and donate suitable equipment.">
-  <meta property="og:image" content="https://mosestechfixsolution.com/assets/images/mosestechfix-hero-v2.png">
   <meta property="og:locale" content="en_UG">
   <meta property="og:site_name" content="MosesTechFix Solutions">
   <title>School Computer Needs &amp; Labs | MosesTechFix Community</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/pages.css">
-  <link rel="stylesheet" href="assets/tech-theme.css?v=type1">
-  <link rel="stylesheet" href="assets/schools-directory.css">
-  <link rel="stylesheet" href="assets/ai-pet.css">
-  <script defer src="assets/analytics.js"></script>
+  <link rel="stylesheet" href="assets/schools-directory.css?v=20261022c">
+  <link rel="stylesheet" href="assets/ai-pet.css?v=20261022c">
+  <script defer src="assets/analytics.js?v=20261022c"></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -41,32 +39,23 @@
       }
     }
   </script>
+  <link rel="stylesheet" href="assets/tech-theme.css?v=20261022c">
+  <link rel="stylesheet" href="assets/site-chrome.css?v=20261022c">
+  <script defer src="assets/home.js?v=20261022c"></script>
+  <link rel="icon" href="assets/mosestechfix-logo.jpg">
 </head>
-<body>
-  <header class="site-header">
-    <div class="container">
-      <nav class="nav" aria-label="Main navigation">
-        <a class="nav-home-btn" href="index.html" aria-label="Back to home page">
-          <i data-lucide="arrow-left" aria-hidden="true"></i> Home
-        </a>
-
-        <a class="brand" href="index.html#home">
-          <img src="assets/mosestechfix-logo.jpg" alt="MosesTechFix Solutions logo">
-          <span>MosesTechFix <small>IT services, training and community</small></span>
-        </a>
-
-        <ul class="nav-links">
-          <li><a href="community.html" aria-current="page" style="color:var(--brand,#24d3ee);font-weight:900;">School Needs</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="index.html#courses">Courses</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="service-request.html">Request service</a></li>
-        </ul>
-      </nav>
+<body class="inner-page community-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-top" id="top">
+    <div class="shell nav">
+      <a class="brand" href="/" aria-label="MosesTechFix Solutions home"><strong>MosesTechFix<span>.</span></strong><small>SOLUTIONS</small></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">Menu <span aria-hidden="true">☰</span></button>
+      <nav class="nav-links" id="main-navigation" aria-label="Main navigation"><a href="services.html">Services</a><a href="website-development.html">Websites</a><a href="/#courses">Training</a><a href="community.html" aria-current="page">School labs</a><a href="/#about">About</a><a href="/#contact">Contact</a></nav>
+      <a class="button nav-cta" href="service-request.html">Request a service <span aria-hidden="true">↗</span></a>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- 1. Opening Section (Guide Sections 3 & 9) -->
     <section class="page-hero" id="opening">
       <div class="container">
@@ -78,8 +67,8 @@
 
         <p class="eyebrow"><i data-lucide="heart-handshake" aria-hidden="true"></i> MosesTechFix Community</p>
         <h1>Help a Ugandan school access computers and digital skills.</h1>
-        <p class="lead">We focus community support on <strong>one verified school at a time</strong> to ensure 100% lab completion before moving to the next. Below is our currently listed school project: <strong>St. Kizito Preparatory School Makenke</strong>. All donor contributions support this school first until fully equipped!</p>
-        
+        <p class="lead">We focus community support on <strong>one verified school at a time</strong> with the aim of completing its lab before moving to the next. Below is our currently listed school project: <strong>St. Kizito Preparatory School Makenke</strong>. The current drive focuses on equipment for this school.</p>
+
         <div class="hero-actions">
           <a class="button primary" href="#active-project"><i data-lucide="flame" aria-hidden="true"></i> Help St. Kizito First ↓</a>
           <a class="button ghost" href="#school-request"><i data-lucide="school" aria-hidden="true"></i> Apply as a school</a>
@@ -91,7 +80,7 @@
           <span class="icon gold"><i data-lucide="shield-check" aria-hidden="true"></i></span>
           <div>
             <strong>One-school focused delivery &middot; Zero cash donations.</strong>
-            <p>We do not scatter community support across dozens of half-equipped labs. We equip one school 100% before activating the next queued school. Equipment is purchased directly from approved suppliers or provided as inspected refurbished hardware. This page does not accept cash donations.</p>
+            <p>The programme focuses on one school at a time, with the goal of completing its computer lab before opening the next drive. Equipment is purchased directly from approved suppliers or provided as inspected refurbished hardware. This page does not accept cash donations.</p>
           </div>
         </div>
       </div>
@@ -119,17 +108,17 @@
 
           <div class="metric-card">
             <div class="metric-header">
-              <span>Equipment Placed</span>
+              <span>Equipment delivered</span>
               <i data-lucide="check-check" aria-hidden="true"></i>
             </div>
             <span class="metric-value" id="metric-active-funded" style="color:var(--green, #4de2b3);">0 PCs</span>
-            <span class="metric-subtitle">Delivered or pledged units</span>
+            <span class="metric-subtitle">Confirmed delivered units</span>
           </div>
 
           <div class="metric-card">
             <div class="metric-header">
               <span>Current Progress</span>
-              <span id="metric-active-pct" style="color:var(--brand, #24d3ee);font-weight:800;">0%</span>
+              <span id="metric-active-pct" style="color:var(--brand, #24d3ee);font-weight:650;">0%</span>
             </div>
             <span class="metric-value" style="font-size:1.35rem;">Active Completion</span>
             <div class="overall-progress-track">
@@ -175,9 +164,9 @@
         <div class="section-heading center">
           <p class="eyebrow"><i data-lucide="route" aria-hidden="true"></i> Accountable Workflow</p>
           <h2>How Our One-School Support Model Works</h2>
-          <p class="lead">A focused, transparent process that guarantees full lab delivery from start to finish.</p>
+          <p class="lead">A clear process for assessing needs, coordinating equipment and recording delivery.</p>
         </div>
-        <div class="process-grid" aria-label="Community support process" style="grid-template-columns: repeat(5, minmax(0, 1fr));">
+        <div class="process-grid" aria-label="Community support process" >
           <article class="process-step">
             <span class="step-number">1</span>
             <h3>School applies</h3>
@@ -273,7 +262,7 @@
           <p class="eyebrow"><i data-lucide="shopping-cart" aria-hidden="true"></i> Buy New Equipment</p>
           <h2>Buy an item directly through a supplier.</h2>
           <p class="lead">If you want to sponsor new equipment, you can purchase directly from a vetted computer supplier. Purchases stay between you and the supplier; MosesTechFix coordinates delivery inspection and school lab setup.</p>
-          <a class="button primary" href="#current-needs"><i data-lucide="search" aria-hidden="true"></i> Browse schools to buy an item</a>
+          <a class="button primary" href="#current-needs"><i data-lucide="search" aria-hidden="true"></i> View the current school drive</a>
         </div>
         <div class="card">
           <p class="eyebrow"><i data-lucide="monitor-up" aria-hidden="true"></i> Refurbished Equipment</p>
@@ -285,16 +274,15 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div><h3>MosesTechFix Solutions</h3><p>Practical IT support, training, and community digital-access work in Uganda.</p></div>
-        <div><h4>Explore</h4><ul class="footer-list"><li><a href="index.html">Home</a></li><li><a href="community.html">School Computer Needs</a></li><li><a href="services.html">Services</a></li><li><a href="index.html#courses">Courses</a></li><li><a href="service-request.html">Request service</a></li></ul></div>
-        <div><h4>Contact</h4><ul class="footer-list"><li><a href="tel:+256708262179">+256 708 262 179</a></li><li><a href="mailto:mosestechfixsolutions@gmail.com">mosestechfixsolutions@gmail.com</a></li><li>Nansana, Kampala, Uganda</li></ul></div>
-      </div>
-      <div class="footer-bottom">&copy; 2026 MosesTechFix Solutions. All rights reserved.</div>
+  <footer class="footer"><div class="shell">
+    <div class="footer-layout">
+      <div class="footer-brand"><a class="brand" href="/"><strong>MosesTechFix<span>.</span></strong><small>SOLUTIONS</small></a><p>Practical IT support, websites<br>and digital skills in Uganda.</p><p>Kampala, Uganda</p></div>
+      <nav class="footer-col" aria-label="Services and support"><h2>Services &amp; support</h2><a href="services.html">IT services</a><a href="website-development.html">Business websites</a><a href="service-request.html">Request a service</a><a href="equipment-recommendation.html">Equipment advice</a><a href="it-procurement.html">IT procurement</a><a href="ai-support.html">Fix AI troubleshooting</a></nav>
+      <nav class="footer-col" aria-label="Explore MosesTechFix"><h2>Explore</h2><a href="/#courses">Training courses</a><a href="community.html">School computer labs</a><a href="offers.html">Packages &amp; offers</a><a href="gallery.html">Work &amp; service examples</a><a href="booking-guide.html">Booking guide</a><a href="service-area.html">Service area &amp; hours</a><a href="computer-repair-checklist-kampala.html">Computer repair checklist</a></nav>
+      <nav class="footer-col" aria-label="Contact MosesTechFix"><h2>Get in touch</h2><a href="tel:+256708262179">+256 708 262 179</a><a href="https://wa.me/256708262179">WhatsApp MosesTechFix</a><a href="mailto:mosestechfixsolutions@gmail.com">mosestechfixsolutions@gmail.com</a><a href="connect.html">WhatsApp &amp; social links</a><a href="leave-review.html">Share honest feedback</a></nav>
     </div>
-  </footer>
+    <div class="footer-bottom"><span>© 2026 MosesTechFix Solutions</span><nav aria-label="Policies"><a href="privacy-policy.html">Privacy</a><a href="terms-of-service.html">Service terms</a></nav></div>
+  </div></footer>
 
   <!-- Modal 1: Section 6 Dual Donor Offer Modal (Buy New / Refurbished) -->
   <dialog class="directory-modal" id="donor-offer-modal" aria-labelledby="donor-modal-title">
@@ -307,7 +295,7 @@
         <span class="school-verification-tag" style="margin-bottom:0.4rem;">
           <i data-lucide="shield-check" style="width:12px;height:12px;"></i> Donor Coordination
         </span>
-        <h2 id="donor-modal-title" style="font-size:1.45rem;font-weight:800;margin:0 0 0.35rem;">
+        <h2 id="donor-modal-title" style="font-size:1.45rem;font-weight:650;margin:0 0 0.35rem;">
           Support <span id="donor-modal-school-name" style="color:var(--brand,#24d3ee);">School</span>
         </h2>
         <p style="font-size:0.85rem;color:var(--muted,#91a9c0);margin:0;">
@@ -316,17 +304,17 @@
       </div>
 
       <!-- Section 6 Dual Pathway Selector -->
-      <div class="donor-pathway-tabs">
-        <button type="button" class="donor-tab-btn active" id="tab-pathway-buy">
+      <div class="donor-pathway-tabs" role="tablist" aria-label="Equipment support options">
+        <button type="button" class="donor-tab-btn active" id="tab-pathway-buy" role="tab" aria-controls="panel-pathway-buy" aria-selected="true">
           <i data-lucide="shopping-cart" style="width:16px;height:16px;"></i> I will buy this item
         </button>
-        <button type="button" class="donor-tab-btn" id="tab-pathway-refurb">
+        <button type="button" class="donor-tab-btn" id="tab-pathway-refurb" role="tab" aria-controls="panel-pathway-refurb" aria-selected="false" tabindex="-1">
           <i data-lucide="laptop" style="width:16px;height:16px;"></i> I have refurbished equipment
         </button>
       </div>
 
       <!-- Pathway A: Buy New Item Form -->
-      <div id="panel-pathway-buy">
+      <div id="panel-pathway-buy" role="tabpanel" aria-labelledby="tab-pathway-buy">
         <div class="donor-trust-notice" style="margin-bottom:1rem;">
           <strong>Direct Supplier Coordination:</strong> You purchase directly through a verified computer hardware vendor. MosesTechFix inspects delivery and coordinates school installation. No cash is collected on this website.
         </div>
@@ -358,7 +346,7 @@
       </div>
 
       <!-- Pathway B: Refurbished Equipment Form -->
-      <div id="panel-pathway-refurb" style="display:none;">
+      <div id="panel-pathway-refurb" role="tabpanel" aria-labelledby="tab-pathway-refurb" hidden style="display:none;">
         <div class="donor-trust-notice" style="margin-bottom:1rem;">
           <strong>Equipment Suitability Check:</strong> MosesTechFix inspects, tests, and wipes donated hardware before matching it with the school.
         </div>
@@ -416,77 +404,9 @@
   </dialog>
 
   <!-- Modal 2: Full School Details Modal -->
-  <dialog class="directory-modal" id="school-modal" aria-labelledby="modal-school-title">
-    <div class="modal-dialog-panel">
-      <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
-        <i data-lucide="x" style="width:20px;height:20px;"></i>
-      </button>
-
-      <div class="modal-header">
-        <div class="modal-badges">
-          <span class="school-status-pill status-in-progress" id="modal-school-status-badge">
-            <i data-lucide="clock" style="width:12px;height:12px;"></i> IN PROGRESS
-          </span>
-          <span class="school-verification-tag">
-            <i data-lucide="shield-check" style="width:12px;height:12px;"></i> Verified Need
-          </span>
-        </div>
-        <h2 class="modal-title" id="modal-school-title">School Name</h2>
-        <div class="modal-meta-row">
-          <span class="modal-meta-item"><i data-lucide="map-pin" style="width:14px;height:14px;"></i> <span id="modal-school-location">Kampala</span></span>
-          <span class="modal-meta-item"><i data-lucide="users" style="width:14px;height:14px;"></i> <span id="modal-school-students">250 Learners</span></span>
-          <span class="modal-meta-item"><i data-lucide="user-check" style="width:14px;height:14px;"></i> <span id="modal-school-lead">Principal</span></span>
-        </div>
-      </div>
-
-      <div class="modal-progress-card">
-        <div class="modal-progress-stats">
-          <div class="modal-stat-box">
-            <span>Overall Goal</span>
-            <strong id="modal-school-goal">15 PCs</strong>
-          </div>
-          <div class="modal-stat-box">
-            <span>Funded Units</span>
-            <strong id="modal-school-funded" style="color:var(--green, #4de2b3);">6 PCs</strong>
-          </div>
-          <div class="modal-stat-box">
-            <span>Progress</span>
-            <strong id="modal-school-percent" style="color:var(--brand, #24d3ee);">40%</strong>
-          </div>
-        </div>
-        <div class="card-progress-bar">
-          <div class="card-progress-fill" id="modal-school-progress-fill" style="width: 40%;"></div>
-        </div>
-      </div>
-
-      <div>
-        <h4 class="modal-section-title"><i data-lucide="file-text"></i> Needs &amp; Current Lab Status</h4>
-        <div class="modal-details-box">
-          <p id="modal-school-summary" style="margin-bottom:0.65rem;"></p>
-          <p><strong style="color:var(--ink,#eef7ff);">Exact Requirements:</strong> <span id="modal-school-needs"></span></p>
-        </div>
-      </div>
-
-      <div>
-        <h4 class="modal-section-title"><i data-lucide="heart-handshake"></i> Verified Funders &amp; Previous Contributions</h4>
-        <div class="modal-funders-list" id="modal-school-funders-list">
-          <!-- Populated dynamically -->
-        </div>
-      </div>
-
-      <div class="modal-cta-group">
-        <button type="button" class="button primary modal-funder-btn" onclick="document.getElementById('school-modal')?.close(); openDonorModal(currentSelectedSchool.id, 'buy');">
-          <i data-lucide="shopping-cart"></i> Buy an Item for This School ↗
-        </button>
-        <button type="button" class="button ghost modal-funder-btn" onclick="document.getElementById('school-modal')?.close(); openDonorModal(currentSelectedSchool.id, 'refurbished');">
-          <i data-lucide="laptop"></i> Offer Refurbished Hardware ↗
-        </button>
-      </div>
-    </div>
-  </dialog>
 
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-  <script src="assets/schools-directory.js"></script>
+  <script src="assets/schools-directory.js?v=20261022c"></script>
   <script>
     const schoolRequestForm = document.getElementById("school-request-form");
     schoolRequestForm?.addEventListener("submit", (event) => {
@@ -508,6 +428,6 @@
     });
     window.lucide?.createIcons();
   </script>
-  <script src="assets/ai-pet.js"></script>
+  <script src="assets/ai-pet.js?v=20261022c"></script>
 </body>
 </html>

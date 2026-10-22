@@ -10,16 +10,14 @@
   <meta property="og:url" content="https://mosestechfixsolution.com/website-development">
   <meta property="og:title" content="Website Development & Hosting for UGX 400,000 | MosesTechFix">
   <meta property="og:description" content="A mobile-friendly business website with first-year hosting and domain registration for UGX 400,000.">
-  <meta property="og:image" content="https://mosestechfixsolution.com/assets/images/mosestechfix-hero-v2.png">
   <title>Website Development & Hosting for UGX 400,000 | MosesTechFix</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/pages.css">
-  <link rel="stylesheet" href="assets/tech-theme.css?v=type1">
-  <link rel="stylesheet" href="assets/ai-pet.css">
-  <link rel="stylesheet" href="assets/portfolio.css?v=20261022b">
-  <script defer src="assets/analytics.js"></script>
+  <link rel="stylesheet" href="assets/ai-pet.css?v=20261022c">
+  <link rel="stylesheet" href="assets/portfolio.css?v=20261022c">
+  <script defer src="assets/analytics.js?v=20261022c"></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -40,28 +38,24 @@
       }
     }
   </script>
+  <link rel="stylesheet" href="assets/tech-theme.css?v=20261022c">
+  <link rel="stylesheet" href="assets/site-chrome.css?v=20261022c">
+  <script defer src="assets/home.js?v=20261022c"></script>
+  <link rel="icon" href="assets/mosestechfix-logo.jpg">
+  <meta name="theme-color" content="#06101c">
 </head>
-<body class="website-service-page">
-  <header class="site-header">
-    <div class="container">
-      <nav class="nav" aria-label="Main navigation">
-        <a class="brand" href="index.html">
-          <img src="assets/mosestechfix-logo.jpg" alt="MosesTechFix Solutions logo">
-          <span>MosesTechFix <small>IT services, training, and websites</small></span>
-        </a>
-        <ul class="nav-links">
-          <li><a href="services.html">Services</a></li>
-          <li><a href="#completed-work">Completed work</a></li>
-          <li><a href="index.html#courses">Courses</a></li>
-          <li><a href="community.html">Community</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="service-request.html">Request service</a></li>
-        </ul>
-      </nav>
+<body class="inner-page website-service-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-top" id="top">
+    <div class="shell nav">
+      <a class="brand" href="/" aria-label="MosesTechFix Solutions home"><strong>MosesTechFix<span>.</span></strong><small>SOLUTIONS</small></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">Menu <span aria-hidden="true">☰</span></button>
+      <nav class="nav-links" id="main-navigation" aria-label="Main navigation"><a href="services.html">Services</a><a href="website-development.html" aria-current="page">Websites</a><a href="/#courses">Training</a><a href="community.html">School labs</a><a href="/#about">About</a><a href="/#contact">Contact</a></nav>
+      <a class="button nav-cta" href="service-request.html">Request a service <span aria-hidden="true">↗</span></a>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="page-hero website-offer-hero">
       <div class="container offer-hero-grid">
         <div>
@@ -245,19 +239,17 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div><h3>MosesTechFix Solutions</h3><p>Practical IT support, training and website development in Uganda.</p></div>
-        <div><h4>Website service</h4><ul class="footer-list"><li><a href="website-development.html">UGX 400,000 package</a></li><li><a href="#completed-work">Completed websites</a></li><li><a href="service-request.html?service=Website%20project">Request a website</a></li><li><a href="leave-review.html">Leave a Google review</a></li></ul></div>
-        <div><h4>Contact</h4><ul class="footer-list"><li><a href="https://wa.me/256708262179" target="_blank" rel="noopener noreferrer">WhatsApp +256 708 262 179</a></li><li><a href="https://wa.me/256789218570" target="_blank" rel="noopener noreferrer">WhatsApp +256 789 218 570</a></li><li><a href="mailto:mosestechfixsolutions@gmail.com">mosestechfixsolutions@gmail.com</a></li></ul></div>
-      </div>
-      <div class="footer-bottom">&copy; 2026 MosesTechFix Solutions. All rights reserved.</div>
+  <footer class="footer"><div class="shell">
+    <div class="footer-layout">
+      <div class="footer-brand"><a class="brand" href="/"><strong>MosesTechFix<span>.</span></strong><small>SOLUTIONS</small></a><p>Practical IT support, websites<br>and digital skills in Uganda.</p><p>Kampala, Uganda</p></div>
+      <nav class="footer-col" aria-label="Services and support"><h2>Services &amp; support</h2><a href="services.html">IT services</a><a href="website-development.html">Business websites</a><a href="service-request.html">Request a service</a><a href="equipment-recommendation.html">Equipment advice</a><a href="it-procurement.html">IT procurement</a><a href="ai-support.html">Fix AI troubleshooting</a></nav>
+      <nav class="footer-col" aria-label="Explore MosesTechFix"><h2>Explore</h2><a href="/#courses">Training courses</a><a href="community.html">School computer labs</a><a href="offers.html">Packages &amp; offers</a><a href="gallery.html">Work &amp; service examples</a><a href="booking-guide.html">Booking guide</a><a href="service-area.html">Service area &amp; hours</a><a href="computer-repair-checklist-kampala.html">Computer repair checklist</a></nav>
+      <nav class="footer-col" aria-label="Contact MosesTechFix"><h2>Get in touch</h2><a href="tel:+256708262179">+256 708 262 179</a><a href="https://wa.me/256708262179">WhatsApp MosesTechFix</a><a href="mailto:mosestechfixsolutions@gmail.com">mosestechfixsolutions@gmail.com</a><a href="connect.html">WhatsApp &amp; social links</a><a href="leave-review.html">Share honest feedback</a></nav>
     </div>
-  </footer>
-  <a class="whatsapp-float" href="https://wa.me/256708262179?text=Hi%20MosesTechFix%2C%20I%20am%20interested%20in%20the%20UGX%20400%2C000%20website%20package." target="_blank" rel="noopener noreferrer" aria-label="Ask about website development on WhatsApp"><i data-lucide="message-circle" aria-hidden="true"></i></a>
+    <div class="footer-bottom"><span>© 2026 MosesTechFix Solutions</span><nav aria-label="Policies"><a href="privacy-policy.html">Privacy</a><a href="terms-of-service.html">Service terms</a></nav></div>
+  </div></footer>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script src="assets/pages.js"></script>
-  <script src="assets/ai-pet.js"></script>
+  <script src="assets/ai-pet.js?v=20261022c"></script>
 </body>
 </html>

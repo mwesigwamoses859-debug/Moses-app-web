@@ -7,7 +7,7 @@
   };
 
   window.gtag("js", new Date());
-  window.gtag("config", measurementId, { send_page_view: true });
+  window.gtag("config", measurementId, { send_page_view: true, page_location: window.location.origin + window.location.pathname });
 
   const script = document.createElement("script");
   script.async = true;
@@ -16,7 +16,7 @@
 
   const track = (name, details = {}) => {
     window.gtag("event", name, {
-      page_location: window.location.href,
+      page_location: window.location.origin + window.location.pathname,
       ...details,
     });
   };
@@ -34,7 +34,7 @@
     }
 
     if (url.hostname === "wa.me" || url.hostname === "api.whatsapp.com") {
-      track("generate_lead", { method: "WhatsApp", link_url: url.href });
+      track("generate_lead", { method: "WhatsApp", link_url: url.origin + url.pathname });
       return;
     }
 
@@ -49,11 +49,11 @@
     }
 
     if (url.pathname.includes("service-request")) {
-      track("service_request_click", { link_url: url.href });
+      track("service_request_click", { link_url: url.origin + url.pathname });
     }
 
     if (url.hostname === "g.page" && url.pathname.endsWith("/review")) {
-      track("review_link_click", { link_url: url.href });
+      track("review_link_click", { link_url: url.origin + url.pathname });
     }
   });
 
