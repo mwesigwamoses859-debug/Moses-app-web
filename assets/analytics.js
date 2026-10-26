@@ -1,4 +1,9 @@
 (() => {
+  // Preview traffic and privacy preferences must not become production results.
+  const productionHosts = new Set(["mosestechfixsolution.com", "www.mosestechfixsolution.com"]);
+  if (!productionHosts.has(window.location.hostname)) return;
+  if (navigator.globalPrivacyControl || navigator.doNotTrack === "1" || window.doNotTrack === "1") return;
+
   const measurementId = "G-KG6CEP3WVG";
 
   window.dataLayer = window.dataLayer || [];
@@ -7,7 +12,19 @@
   };
 
   window.gtag("js", new Date());
-  window.gtag("config", measurementId, { send_page_view: true, page_location: window.location.origin + window.location.pathname });
+  const pageLocation = window.location.origin + window.location.pathname;
+  let pageReferrer = "";
+  try {
+    const referrer = new URL(document.referrer);
+    pageReferrer = referrer.origin + referrer.pathname;
+  } catch { /* A direct visit has no referrer. */ }
+  window.gtag("config", measurementId, {
+    send_page_view: true,
+    page_location: pageLocation,
+    page_referrer: pageReferrer,
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false,
+  });
 
   const script = document.createElement("script");
   script.async = true;
@@ -16,13 +33,13 @@
 
   const track = (name, details = {}) => {
     window.gtag("event", name, {
-      page_location: window.location.origin + window.location.pathname,
+      page_location: pageLocation,
       ...details,
     });
   };
 
   document.addEventListener("click", (event) => {
-    const link = event.target.closest("a[href]");
+    const link = event.target.closest?.("a[href]");
     if (!link) return;
 
     const rawHref = link.getAttribute("href") || "";
@@ -33,23 +50,34 @@
       return;
     }
 
+    const linkLocation = link.dataset.trackLocation || link.closest("section[id]")?.id || "navigation";
+
+    if (["youtube.com", "www.youtube.com", "m.youtube.com", "youtu.be"].includes(url.hostname)) {
+      track("youtube_click", {
+        link_url: url.origin + url.pathname,
+        link_location: linkLocation,
+        video_id: link.dataset.videoId || "channel",
+      });
+      return;
+    }
+
     if (url.hostname === "wa.me" || url.hostname === "api.whatsapp.com") {
-      track("generate_lead", { method: "WhatsApp", link_url: url.origin + url.pathname });
+      track("service_enquiry_click", { method: "WhatsApp", link_location: linkLocation });
       return;
     }
 
     if (url.protocol === "tel:") {
-      track("generate_lead", { method: "Phone", link_url: rawHref });
+      track("service_enquiry_click", { method: "Phone", link_location: linkLocation });
       return;
     }
 
     if (url.protocol === "mailto:") {
-      track("generate_lead", { method: "Email", link_url: rawHref });
+      track("service_enquiry_click", { method: "Email", link_location: linkLocation });
       return;
     }
 
-    if (url.pathname.includes("service-request")) {
-      track("service_request_click", { link_url: url.origin + url.pathname });
+    if (url.origin === window.location.origin && /\/service-request(?:\.html)?$/.test(url.pathname)) {
+      track("service_request_click", { link_url: url.origin + url.pathname, link_location: linkLocation });
     }
 
     if (url.hostname === "g.page" && url.pathname.endsWith("/review")) {
@@ -58,8 +86,15 @@
   });
 
   document.addEventListener("submit", (event) => {
-    if (event.target.matches("[data-whatsapp-form]")) {
-      track("generate_lead", { method: "WhatsApp form" });
+    if (event.target.matches?.("[data-whatsapp-form]") && event.target.checkValidity()) {
+      // The form prepares a message; it cannot confirm that WhatsApp sent it.
+      track("service_enquiry_handoff", { method: "WhatsApp form" });
     }
   }, true);
+
+  document.addEventListener("mosestechfix:video-load", (event) => {
+    if (["9vKnevCFTds", "VLVjy__5Cdg", "eleoykpHfgI"].includes(event.detail?.videoId)) {
+      track("video_embed_open", { video_id: event.detail.videoId, link_location: "featured_videos" });
+    }
+  });
 })();
