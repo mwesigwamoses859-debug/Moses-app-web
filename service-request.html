@@ -21,6 +21,7 @@
   <meta property="og:url" content="https://mosestechfixsolution.com/service-request">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#06101c">
+  <link rel="stylesheet" href="assets/enquiries.css?v=20261028">
 </head>
 <body class="inner-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -38,15 +39,15 @@
       <div class="container">
         <p class="eyebrow"><i data-lucide="clipboard-list" aria-hidden="true"></i> Service request</p>
         <h1>Request a service</h1>
-        <p class="lead">Choose a service and send a clear WhatsApp request.</p>
+        <p class="lead">Send your enquiry here, or contact Moses directly on WhatsApp. Choose the option that suits you.</p>
         <div class="hero-actions">
           <a class="button primary" href="#request-form">
             <i data-lucide="send" aria-hidden="true"></i>
             Fill the form
           </a>
-          <a class="button ghost" href="connect.html">
+          <a class="button ghost" href="https://wa.me/256708262179?text=Hi%20Moses%2C%20I%20would%20like%20to%20ask%20about%20a%20service." data-track-location="request_hero">
             <i data-lucide="message-circle" aria-hidden="true"></i>
-            Use WhatsApp chooser
+            WhatsApp Moses
           </a>
         </div>
       </div>
@@ -59,73 +60,21 @@
             <span class="icon"><i data-lucide="clipboard-check" aria-hidden="true"></i></span>
             <h2>Service request form</h2>
             <p>Use this for computer repair, procurement support, training, TIN and passport help, or website projects.</p>
-            <form class="request-form" data-whatsapp-form data-message-title="Service Request">
-              <div class="form-grid">
-                <div class="field">
-                  <label for="name">Full name</label>
-                  <input id="name" name="Full name" type="text" autocomplete="name" required>
-                </div>
-                <div class="field">
-                  <label for="phone">Phone or WhatsApp number</label>
-                  <input id="phone" name="Phone" type="tel" autocomplete="tel" required>
-                </div>
-                <div class="field">
-                  <label for="service">Service needed</label>
-                  <select id="service" name="Service needed" required>
-                    <option value="">Select a service</option>
-                    <option>Computer repair or support</option>
-                    <option>IT procurement support</option>
-                    <option>Training course</option>
-                    <option>TIN or passport assistance</option>
-                    <option value="Website project">Website project — UGX 400,000 with first-year hosting and domain</option>
-                  </select>
-                </div>
-                <div class="field">
-                  <label for="urgency">How urgent is it?</label>
-                  <select id="urgency" name="Urgency" required>
-                    <option value="">Select urgency</option>
-                    <option>Today</option>
-                    <option>This week</option>
-                    <option>This month</option>
-                    <option>Not urgent</option>
-                  </select>
-                </div>
-                <div class="field">
-                  <label for="location">Location or preferred mode</label>
-                  <input id="location" name="Location or mode" type="text" placeholder="Example: Nansana, Kampala, remote, on-site" required>
-                </div>
-                <div class="field">
-                  <label for="contact-time">Best time to contact you</label>
-                  <input id="contact-time" name="Best contact time" type="text" placeholder="Example: morning, afternoon, evening">
-                </div>
-                <div class="field full">
-                  <label for="details">Request details</label>
-                  <textarea id="details" name="Request details" placeholder="Briefly describe what you need, the device or service involved, and any deadline." required></textarea>
-                </div>
-              </div>
-              <p class="form-note">Continue to review your request in WhatsApp. Nothing is sent until you press Send there.</p>
-              <div class="form-actions">
-                <button class="button primary" type="submit">
-                  <i data-lucide="message-circle" aria-hidden="true"></i>
-                  Continue to WhatsApp
-                </button>
-                <a class="button ghost" href="tel:+256708262179">
-                  <i data-lucide="phone" aria-hidden="true"></i>
-                  Call instead
-                </a>
-              </div>
-            </form>
+            <p class="form-note">This form sends your enquiry directly to MosesTechFix using Google Forms. WhatsApp is optional. Read our <a href="privacy-policy.html">privacy information</a>.</p>
+            <p><a class="button ghost" id="enquiry-form-link" href="https://docs.google.com/forms/d/e/1FAIpQLSceQlVzRBaEIvquLp1NJgo23J-yFVtRCwlYT8UwQrGLLj37CA/viewform" target="_blank" rel="noopener noreferrer" data-track-form="enquiry" data-track-location="request_form">Open the enquiry form in a new tab ↗</a></p>
+            <iframe class="enquiry-frame" id="enquiry-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSceQlVzRBaEIvquLp1NJgo23J-yFVtRCwlYT8UwQrGLLj37CA/viewform?embedded=true" title="Send your enquiry to MosesTechFix" width="640" height="1320" loading="eager" referrerpolicy="strict-origin-when-cross-origin">Open the enquiry form using the link above.</iframe>
           </article>
 
           <aside class="card notice">
             <span class="icon gold"><i data-lucide="info" aria-hidden="true"></i></span>
-            <h2>What happens next?</h2>
+            <h2>What happens next?</h2><p>Moses will use the contact details you provide to discuss your request. Please wait for the form’s confirmation before closing it.</p>
             <ul class="check-list">
-              <li><i data-lucide="check" aria-hidden="true"></i> Your details open as a ready WhatsApp message</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Your submitted enquiry is saved and Moses receives an email notification</li>
               <li><i data-lucide="check" aria-hidden="true"></i> MosesTechFix reviews the request and replies with next steps</li>
               <li><i data-lucide="check" aria-hidden="true"></i> Any price or payment is confirmed before work starts</li>
-              <li><i data-lucide="check" aria-hidden="true"></i> Payments can be made to 0789 218 570 after confirmation</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> There is no payment required to send an enquiry</li>
             </ul>
+<p>Prefer a conversation? Send a WhatsApp message and describe what you need.</p><p><a class="button primary" id="service-whatsapp" href="https://wa.me/256708262179" data-track-location="request_alternative">Message Moses on WhatsApp</a></p><p>Contact hours: Monday–Friday, 9am–6pm; Saturday, 10am–4pm.</p>
             <a class="button ghost" href="booking-guide.html">
               <i data-lucide="list-checks" aria-hidden="true"></i>
               View booking guide
@@ -141,7 +90,7 @@
       <div class="footer-brand"><a class="brand" href="/"><strong>MosesTechFix<span>.</span></strong><small>SOLUTIONS</small></a><p>Practical IT support, websites<br>and digital skills in Uganda.</p><p>Kampala, Uganda</p></div>
       <nav class="footer-col" aria-label="Services and support"><h2>Services &amp; support</h2><a href="services.html">IT services</a><a href="computer-repair.html">Computer repair</a><a href="website-development.html">Business websites</a><a href="service-request.html">Request a service</a><a href="equipment-recommendation.html">Equipment advice</a><a href="it-procurement.html">IT procurement</a><a href="ai-support.html">Fix AI troubleshooting</a></nav>
       <nav class="footer-col" aria-label="Explore MosesTechFix"><h2>Explore</h2><a href="computer-training.html">Training courses</a><a href="community.html">School computer labs</a><a href="offers.html">Packages &amp; offers</a><a href="gallery.html">Work &amp; service examples</a><a href="booking-guide.html">Booking guide</a><a href="service-area.html">Service area &amp; hours</a><a href="computer-repair-checklist-kampala.html">Computer repair checklist</a></nav>
-      <nav class="footer-col" aria-label="Contact MosesTechFix"><h2>Get in touch</h2><a href="tel:+256708262179">+256 708 262 179</a><a href="https://wa.me/256708262179">WhatsApp MosesTechFix</a><a href="mailto:mosestechfixsolutions@gmail.com">mosestechfixsolutions@gmail.com</a><a href="connect.html">WhatsApp &amp; social links</a><a href="leave-review.html">Share honest feedback</a></nav>
+      <nav class="footer-col" aria-label="Contact MosesTechFix"><h2>Get in touch</h2><a href="tel:+256708262179">+256 708 262 179</a><a href="https://wa.me/256708262179">WhatsApp MosesTechFix</a><a href="mailto:mosestechfixsolutions@gmail.com">mosestechfixsolutions@gmail.com</a><a href="https://wa.me/256708262179?text=Hi%20Moses%2C%20I%20would%20like%20to%20ask%20about%20a%20service." data-track-location="request_hero">WhatsApp &amp; social links</a><a href="leave-review.html">Share honest feedback</a></nav>
     </div>
     <div class="footer-bottom"><span>© 2026 MosesTechFix Solutions</span><nav aria-label="Policies"><a href="privacy-policy.html">Privacy</a><a href="terms-of-service.html">Service terms</a></nav></div>
   </div></footer>
@@ -150,29 +99,18 @@
   <script>
     if (window.lucide) window.lucide.createIcons();
 
-    const requestedService = new URLSearchParams(window.location.search).get("service");
-    const serviceSelect = document.getElementById("service");
-    if (requestedService && serviceSelect) serviceSelect.value = requestedService;
-
-    document.querySelectorAll("[data-whatsapp-form]").forEach((form) => {
-      form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        if (!form.reportValidity()) return;
-
-        const title = form.dataset.messageTitle || "Website Request";
-        const lines = [`Hi MosesTechFix, I would like to submit a ${title}.`, ""];
-        new FormData(form).forEach((value, key) => {
-          const clean = String(value).trim();
-          if (clean) lines.push(`${key}: ${clean}`);
-        });
-        lines.push("", "Please guide me on the next step.");
-
-        const url = `https://wa.me/256708262179?text=${encodeURIComponent(lines.join("\n"))}`;
-        window.open(url, "_blank", "noopener,noreferrer");
-      });
-    });
+    const services = new Set(["Website project", "Computer repair or support", "Training course", "IT procurement support", "TIN or passport assistance", "Other service"]);
+    const selected = new URL(window.location.href).searchParams.get("service");
+    if (services.has(selected)) {
+      const formUrl = new URL("https://docs.google.com/forms/d/e/1FAIpQLSceQlVzRBaEIvquLp1NJgo23J-yFVtRCwlYT8UwQrGLLj37CA/viewform");
+      formUrl.searchParams.set("entry.403452146", selected);
+      document.getElementById("enquiry-form-link").href = formUrl.href;
+      formUrl.searchParams.set("embedded", "true");
+      document.getElementById("enquiry-frame").src = formUrl.href;
+      document.getElementById("service-whatsapp").href = "https://wa.me/256708262179?text=" + encodeURIComponent("Hi Moses, I would like to ask about: " + selected + ". Please guide me on the next step.");
+    }
   </script>
-  <script defer src="assets/analytics.js?v=20261022c"></script>
+  <script defer src="assets/analytics.js?v=20261028"></script>
   <script src="assets/ai-pet.js?v=20261022c"></script>
 </body>
 </html>

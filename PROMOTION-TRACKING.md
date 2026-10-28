@@ -30,3 +30,16 @@ The earlier `generate_lead` event counted contact clicks. New interactions use t
 No form contents, WhatsApp message text, email addresses or phone numbers are added to the custom analytics events. Page URLs and referrers omit their query strings. Advertising personalization is disabled in this tag configuration. Preview hosts, Do Not Track and Global Privacy Control are excluded, so test previews do not inflate production counts. Browser privacy tools and visitors' choices can reduce the measurable audience.
 
 Tracking starts when this change is published and records future activity; the new events cannot reconstruct past clicks. No paid advertising has been enabled.
+
+
+## Service enquiries and booked work
+
+The service-request page now embeds the official Google Forms enquiry form. It accepts four required fields: name, preferred contact, service and requirements. It does not require a Google sign-in or a WhatsApp message. The selected service is passed from the referring service page. An always-visible link opens the same form directly if the embed cannot load.
+
+Google Forms is the source of truth for form submissions. Its linked private response sheet and the owner's new-response email notifications are enabled. A cross-origin Google Form cannot reliably report completion to the surrounding website; do not label an iframe load or form-open click as a submitted lead.
+
+Analytics uses the existing property G-KG6CEP3WVG. `service_type` distinguishes website development, computer support, training, procurement, application assistance and general enquiries. `project_example_click` measures opening the two selected portfolio links; `enquiry_form_open` measures opening the direct Google Form link. Existing WhatsApp/phone/email click and WhatsApp handoff events remain separate.
+
+For actual bookings, record one row per customer enquiry in the booking tracker. Reuse the same row if a customer uses both WhatsApp and the form. Stages are New, Contacted, Quoted, Booked, Completed, Lost and Test. Mark a job Booked only after the customer agrees to the work; record payments separately from the agreed job value. Exclude clearly labelled website tests from lead totals.
+
+Review Search Console impressions and clicks for each service page over matching 28-day periods. Compare them with actual enquiries and confirmed jobs for that period. Search Console hides some low-volume queries, so query-table totals may differ from the headline totals. Neither search clicks nor contact clicks are confirmed customers.

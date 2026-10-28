@@ -34,9 +34,27 @@
   const track = (name, details = {}) => {
     window.gtag("event", name, {
       page_location: pageLocation,
+      service_type: serviceForUrl(new URL(window.location.href)),
       ...details,
     });
   };
+
+  // Only known service labels enter Analytics; enquiry text and contacts never do.
+  function serviceForUrl(url) {
+    const serviceNames = {
+      "Website project": "website_development",
+      "Computer repair or support": "computer_support",
+      "Training course": "training",
+      "IT procurement support": "it_procurement",
+      "TIN or passport assistance": "application_assistance",
+    };
+    const chosenService = url.searchParams.get("service");
+    if (Object.hasOwn(serviceNames, chosenService)) return serviceNames[chosenService];
+    if (/\/website-development(?:\.html)?$/.test(url.pathname)) return "website_development";
+    if (/\/computer-repair(?:\.html)?$/.test(url.pathname)) return "computer_support";
+    if (/\/computer-training(?:\.html)?$/.test(url.pathname)) return "training";
+    return "general";
+  }
 
   document.addEventListener("click", (event) => {
     const link = event.target.closest?.("a[href]");
@@ -77,7 +95,16 @@
     }
 
     if (url.origin === window.location.origin && /\/service-request(?:\.html)?$/.test(url.pathname)) {
-      track("service_request_click", { link_url: url.origin + url.pathname, link_location: linkLocation });
+      track("service_request_click", { link_url: url.origin + url.pathname, link_location: linkLocation, service_type: serviceForUrl(url) });
+    }
+
+    if (link.dataset.trackForm === "enquiry" && url.hostname === "docs.google.com") {
+      // Opening a Google Form is interest. Actual submissions are in Forms/Sheets.
+      track("enquiry_form_open", { link_location: linkLocation });
+    }
+
+    if (["augur_travel", "pid_uganda"].includes(link.dataset.project)) {
+      track("project_example_click", { project: link.dataset.project, link_location: linkLocation });
     }
 
     if (url.hostname === "g.page" && url.pathname.endsWith("/review")) {

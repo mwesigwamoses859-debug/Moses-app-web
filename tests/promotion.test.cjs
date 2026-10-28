@@ -68,6 +68,31 @@ test('opening the request form is separate from contacting Moses', () => {
   assert.equal(page.events().length, 1);
 });
 
+test('service requests identify the selected service without copying customer query data', () => {
+  const page = analytics();
+  page.click('/service-request.html?service=Website%20project&name=private', { trackLocation: 'website_hero' });
+  page.click('/service-request?service=Training%20course&phone=private');
+  page.click('/service-request?service=private%20customer%20message');
+  assert.deepEqual(page.events().map(([, , details]) => details.service_type), ['website_development', 'training', 'general']);
+  assert.ok(!JSON.stringify(page.events()).includes('private'));
+});
+
+test('opening the direct enquiry form is separate from a received submission', () => {
+  const page = analytics();
+  page.click('https://docs.google.com/forms/d/e/example/viewform?entry.1=private', { trackForm: 'enquiry' });
+  assert.equal(page.events()[0][1], 'enquiry_form_open');
+  assert.ok(!JSON.stringify(page.events()).includes('private'));
+  assert.ok(!page.events().some(([, name]) => name === 'generate_lead'));
+});
+
+test('portfolio events accept only the two known project identifiers', () => {
+  const page = analytics();
+  page.click('https://augurtravel.com/', { project: 'augur_travel' });
+  page.click('https://www.piduganda.org/', { project: 'pid_uganda' });
+  page.click('https://example.com/', { project: 'private customer' });
+  assert.deepEqual(page.events().map(([,name,details])=>[name,details.project]), [['project_example_click','augur_travel'],['project_example_click','pid_uganda']]);
+});
+
 test('only a valid WhatsApp form records an enquiry handoff', () => {
   const page = analytics();
   page.dispatch('submit', { target: { matches: () => true, checkValidity: () => false } });
