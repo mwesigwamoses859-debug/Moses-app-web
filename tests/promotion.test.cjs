@@ -85,12 +85,16 @@ test('opening the direct enquiry form is separate from a received submission', (
   assert.ok(!page.events().some(([, name]) => name === 'generate_lead'));
 });
 
-test('portfolio events accept only the two known project identifiers', () => {
+test('portfolio events accept known projects and distinguish CVStart visits from completed CVs', () => {
   const page = analytics();
   page.click('https://augurtravel.com/', { project: 'augur_travel' });
   page.click('https://www.piduganda.org/', { project: 'pid_uganda' });
+  page.click('https://cvstart.pages.dev/?name=private', { project: 'cvstart', trackLocation: 'home_cvstart' });
   page.click('https://example.com/', { project: 'private customer' });
-  assert.deepEqual(page.events().map(([,name,details])=>[name,details.project]), [['project_example_click','augur_travel'],['project_example_click','pid_uganda']]);
+  assert.deepEqual(page.events().map(([,name,details])=>[name,details.project]), [['project_example_click','augur_travel'],['project_example_click','pid_uganda'],['project_example_click','cvstart']]);
+  assert.equal(page.events()[2][2].link_location, 'home_cvstart');
+  assert.ok(!JSON.stringify(page.events()).includes('private'));
+  assert.ok(!page.events().some(([,name]) => name === 'cv_download'));
 });
 
 test('only a valid WhatsApp form records an enquiry handoff', () => {

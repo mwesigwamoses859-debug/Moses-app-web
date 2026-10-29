@@ -103,7 +103,7 @@
       track("enquiry_form_open", { link_location: linkLocation });
     }
 
-    if (["augur_travel", "pid_uganda"].includes(link.dataset.project)) {
+    if (["augur_travel", "pid_uganda", "cvstart"].includes(link.dataset.project)) {
       track("project_example_click", { project: link.dataset.project, link_location: linkLocation });
     }
 
