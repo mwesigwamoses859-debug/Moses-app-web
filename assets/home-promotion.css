@@ -32,3 +32,10 @@
 @media(max-width:800px){.video-grid{grid-template-columns:1fr}.video-card{display:grid;grid-template-columns:1fr 1.15fr}.video-slot{aspect-ratio:auto;min-height:220px}.video-section-footer{align-items:flex-start;flex-direction:column}.video-copy h3{font-size:21px}}
 @media(max-width:600px){.video-card{display:flex}.video-slot{aspect-ratio:16/10;min-height:0}.video-copy{padding:24px}.video-copy>p:not(.eyebrow){font-size:13px}.video-section-footer .button{width:100%}.founder-name{margin-top:20px}.about-actions{align-items:flex-start;flex-direction:column}.about-actions .button{width:100%}}
 @media(prefers-reduced-motion:reduce){.video-preview img{transition:none}}
+
+/* The website offer is the homepage's first enquiry route. */
+.hero-package-note{max-width:650px;margin-top:18px;color:#a9c4d2;font-size:11px;line-height:1.75}
+.hero-detail a{color:#b5d6e3;text-decoration:underline;text-underline-offset:4px}
+.hero-detail a:hover{color:var(--cyan)}
+.hero-detail a+a:before{content:"/";margin-right:18px;color:#287489;display:inline-block;text-decoration:none}
+@media(max-width:600px){.hero-package-note{font-size:10px}.hero-detail{gap:16px}.hero-detail a+a:before{margin-right:16px}}

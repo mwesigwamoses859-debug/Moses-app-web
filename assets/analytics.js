@@ -80,7 +80,7 @@
     }
 
     if (url.hostname === "wa.me" || url.hostname === "api.whatsapp.com") {
-      track("service_enquiry_click", { method: "WhatsApp", link_location: linkLocation });
+      track("service_enquiry_click", { method: "WhatsApp", link_location: linkLocation, service_type: link.dataset.trackService === "website_development" ? "website_development" : serviceForUrl(new URL(window.location.href)) });
       return;
     }
 

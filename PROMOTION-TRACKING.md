@@ -43,3 +43,14 @@ Analytics uses the existing property G-KG6CEP3WVG. `service_type` distinguishes 
 For actual bookings, record one row per customer enquiry in the booking tracker. Reuse the same row if a customer uses both WhatsApp and the form. Stages are New, Contacted, Quoted, Booked, Completed, Lost and Test. Mark a job Booked only after the customer agrees to the work; record payments separately from the agreed job value. Exclude clearly labelled website tests from lead totals.
 
 Review Search Console impressions and clicks for each service page over matching 28-day periods. Compare them with actual enquiries and confirmed jobs for that period. Search Console hides some low-volume queries, so query-table totals may differ from the headline totals. Neither search clicks nor contact clicks are confirmed customers.
+
+
+## November 2026 website campaign
+
+The homepage's first screen now presents the UGX 400,000 business website offer, first-year domain and hosting, scope/renewal clarification, completed-work link, both phone numbers and a specific WhatsApp enquiry. The WhatsApp click uses `link_location: home_website_offer` and `service_type: website_development`; it measures interest, never a received message or sale.
+
+Use the public landing page `/website-development?utm_source=CHANNEL&utm_medium=organic_social&utm_campaign=website_400k_202611` in channel captions, replacing CHANNEL with tiktok, youtube, facebook or whatsapp. For the paid Meta campaign, use utm_source=facebook and utm_medium=paid_social. Query strings remain excluded from this site's custom event payloads.
+
+For each actual enquiry, record its campaign/source, business type, contact date, quotation amount, stage, agreed value, payment received and follow-up date in the private booking tracker. Count a paid client once and record cash received separately from the total quoted or agreed value. Never put client contact information in public source files or analytics events.
+
+The proposed paid test is capped at UGX 70,000 total over seven days, inclusive of any mandatory platform charges; daily average UGX 10,000. Do not treat a prepared campaign as a launched campaign. Confirm live campaign status in Meta and record actual spend. Divide spend by confirmed paid clients to assess acquisition cost; if no paid clients have arrived, report no sales yet rather than dividing by zero.
