@@ -16,11 +16,11 @@ Use the existing Google Analytics property for the website (web stream `G-KG6CEP
 
 The earlier `generate_lead` event counted contact clicks. New interactions use the more precise names above. Do not add counts across these events and call the total unique enquiries: one visitor may click multiple buttons. Confirm actual enquiries and bookings from received messages and agreed work.
 
-## Compare before paying for advertising
+## Measure free promotion
 
 1. Review the first seven complete days, then the following seven days, using the same event names and date lengths.
 2. Compare homepage visitors, YouTube clicks, service-request opens and contact clicks. Relate these to actual enquiries received in WhatsApp, phone and email.
-3. Look for which topic and placement attracts interest; improve the relevant page or video before choosing an advertising budget.
+3. Look for which topic and placement attracts interest; improve the relevant page or video using the free promotion results.
 4. For a ratio, use distinct users who triggered the event divided by homepage users, rather than raw event counts. This avoids treating repeated clicks as additional people.
 
 `link_location` identifies placements such as `featured_channel`, `featured_windows`, `featured_laptop`, `featured_travel` and `meet_moses`. `video_id` identifies the selected video. Parameters can be inspected in Realtime or DebugView; create matching event-scoped custom dimensions in Google Analytics to use them in longer-term explorations.
@@ -49,8 +49,8 @@ Review Search Console impressions and clicks for each service page over matching
 
 The homepage's first screen now presents the UGX 400,000 business website offer, first-year domain and hosting, scope/renewal clarification, completed-work link, both phone numbers and a specific WhatsApp enquiry. The WhatsApp click uses `link_location: home_website_offer` and `service_type: website_development`; it measures interest, never a received message or sale.
 
-Use the public landing page `/website-development?utm_source=CHANNEL&utm_medium=organic_social&utm_campaign=website_400k_202611` in channel captions, replacing CHANNEL with tiktok, youtube, facebook or whatsapp. For the paid Meta campaign, use utm_source=facebook and utm_medium=paid_social. Query strings remain excluded from this site's custom event payloads.
+Use the public landing page `/website-development?utm_source=CHANNEL&utm_medium=organic_social&utm_campaign=website_400k_202611` in channel captions, replacing CHANNEL with tiktok, youtube, facebook or whatsapp. Use organic_social for free Facebook posts. Paid advertising is disabled; the approved advertising budget is UGX 0. Query strings remain excluded from this site's custom event payloads.
 
 For each actual enquiry, record its campaign/source, business type, contact date, quotation amount, stage, agreed value, payment received and follow-up date in the private booking tracker. Count a paid client once and record cash received separately from the total quoted or agreed value. Never put client contact information in public source files or analytics events.
 
-The proposed paid test is capped at UGX 70,000 total over seven days, inclusive of any mandatory platform charges; daily average UGX 10,000. Do not treat a prepared campaign as a launched campaign. Confirm live campaign status in Meta and record actual spend. Divide spend by confirmed paid clients to assess acquisition cost; if no paid clients have arrived, report no sales yet rather than dividing by zero.
+On 6 November 2026 the owner cancelled the proposed paid test and instructed free promotion only. The approved advertising budget is UGX 0. No paid campaign was created, launched or funded as part of this work. Do not create or enable paid ads. Continue using the homepage offer, Google Business Profile updates, organic TikTok and YouTube videos, free Facebook posts when account access is available, and WhatsApp Status graphics. Track actual enquiries, quotations, agreed work and customer payments without treating views or clicks as sales.
