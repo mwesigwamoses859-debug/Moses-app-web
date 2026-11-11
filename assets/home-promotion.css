@@ -39,3 +39,93 @@
 .hero-detail a:hover{color:var(--cyan)}
 .hero-detail a+a:before{content:"/";margin-right:18px;color:#287489;display:inline-block;text-decoration:none}
 @media(max-width:600px){.hero-package-note{font-size:10px}.hero-detail{gap:16px}.hero-detail a+a:before{margin-right:16px}}
+
+
+/* YouTube Growth Banner & Auto-Subscribe Callout */
+.youtube-growth-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 36px;
+  padding: 28px 32px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #06101c 0%, #0e243b 100%);
+  border: 1px solid rgba(36, 211, 238, 0.28);
+  box-shadow: 0 10px 30px rgba(6, 16, 28, 0.35);
+  color: #fff;
+}
+.youtube-growth-content {
+  flex: 1;
+  min-width: 0;
+}
+.youtube-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 0, 0, 0.15);
+  border: 1px solid rgba(255, 0, 0, 0.35);
+  font-size: 11px;
+  font-weight: 700;
+  color: #ff5252;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.youtube-growth-banner h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: #fff;
+  line-height: 1.3;
+}
+.youtube-growth-banner p {
+  margin: 0;
+  color: #accbd8;
+  font-size: 13px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+.youtube-growth-action {
+  flex: none;
+}
+.youtube-sub-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  background: #FF0000 !important;
+  color: #fff !important;
+  border: none !important;
+  padding: 13px 22px !important;
+  border-radius: 8px !important;
+  font-size: 13px !important;
+  font-weight: 750 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  box-shadow: 0 4px 16px rgba(255, 0, 0, 0.35) !important;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease !important;
+}
+.youtube-sub-button:hover {
+  background: #cc0000 !important;
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.5) !important;
+  color: #fff !important;
+}
+.youtube-sub-button svg {
+  fill: currentColor;
+  flex-shrink: 0;
+}
+@media (max-width: 800px) {
+  .youtube-growth-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+    gap: 20px;
+  }
+  .youtube-sub-button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
