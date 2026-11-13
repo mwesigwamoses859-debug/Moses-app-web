@@ -50,6 +50,7 @@
     };
     const chosenService = url.searchParams.get("service");
     if (Object.hasOwn(serviceNames, chosenService)) return serviceNames[chosenService];
+    if (/\/school-management-systems(?:\.html)?$/.test(url.pathname)) return "school_management";
     if (/\/website-development(?:\.html)?$/.test(url.pathname)) return "website_development";
     if (/\/computer-repair(?:\.html)?$/.test(url.pathname)) return "computer_support";
     if (/\/computer-training(?:\.html)?$/.test(url.pathname)) return "training";
@@ -80,7 +81,7 @@
     }
 
     if (url.hostname === "wa.me" || url.hostname === "api.whatsapp.com") {
-      track("service_enquiry_click", { method: "WhatsApp", link_location: linkLocation, service_type: link.dataset.trackService === "website_development" ? "website_development" : serviceForUrl(new URL(window.location.href)) });
+      track("service_enquiry_click", { method: "WhatsApp", link_location: linkLocation, service_type: ["website_development", "school_management"].includes(link.dataset.trackService) ? link.dataset.trackService : serviceForUrl(new URL(window.location.href)) });
       return;
     }
 
