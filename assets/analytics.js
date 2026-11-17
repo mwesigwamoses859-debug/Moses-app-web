@@ -121,8 +121,9 @@
   }, true);
 
   document.addEventListener("mosestechfix:video-load", (event) => {
-    if (["9vKnevCFTds", "VLVjy__5Cdg", "eleoykpHfgI"].includes(event.detail?.videoId)) {
+    if (["9vKnevCFTds", "VLVjy__5Cdg", "eleoykpHfgI", "Yomg_GRNAYc"].includes(event.detail?.videoId)) {
       track("video_embed_open", { video_id: event.detail.videoId, link_location: "featured_videos" });
     }
   });
 })();
+

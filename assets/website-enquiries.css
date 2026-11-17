@@ -1,0 +1,18 @@
+.website-brief{scroll-margin-top:6rem;padding:clamp(2.5rem,6vw,5rem) 0;background:#0b1b2d;color:#f3f8ff}
+.website-brief__layout{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+.website-brief h2{font-size:clamp(1.8rem,3.4vw,2.7rem);line-height:1.15;margin:.5rem 0 1rem}
+.website-brief p,.website-brief li{color:#c2d0df;line-height:1.65}
+.website-brief__price{display:inline-block;padding:.5rem .85rem;border:1px solid #3c796e;border-radius:999px;background:#123a37;color:#a5f3d2;font-weight:700}
+.website-brief__note{font-size:.9rem}
+.website-brief__form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;background:#10263d;border:1px solid #30485f;border-radius:1.2rem;padding:clamp(1rem,3vw,1.75rem)}
+.website-brief__form label{display:block;min-width:0;font-size:.94rem;font-weight:600;color:#edf5ff}
+.website-brief__form input,.website-brief__form textarea,.website-brief__form select{display:block;box-sizing:border-box;width:100%;min-width:0;margin-top:.4rem;padding:.8rem;border:1px solid #526b83;border-radius:.55rem;background:#071827;color:#f3f8ff;font:inherit;line-height:1.4}
+.website-brief__form textarea{resize:vertical;min-height:6rem}
+.website-brief__form select option{background:#071827;color:#f3f8ff}
+.website-brief__form input:focus,.website-brief__form textarea:focus,.website-brief__form select:focus{outline:3px solid #77d3c2;outline-offset:2px}
+.website-brief__wide{grid-column:1/-1}
+.website-brief__form .button{display:inline-flex;justify-content:center;align-items:center;min-height:3rem;white-space:normal;text-align:center;width:100%;cursor:pointer;border:0;background:#65d6b5;color:#061a22;font-weight:700}
+.website-brief__form p{margin:0;font-size:.85rem;font-weight:400}
+.website-brief__form a{color:#a5f3d2;text-decoration:underline}
+.website-proof-image{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top}
+@media(max-width:760px){.website-brief__layout{grid-template-columns:minmax(0,1fr)}.website-brief__form{grid-template-columns:minmax(0,1fr)}}

@@ -1,5 +1,5 @@
 (() => {
-  const videoIds = new Set(["9vKnevCFTds", "VLVjy__5Cdg", "eleoykpHfgI"]);
+  const videoIds = new Set(["9vKnevCFTds", "VLVjy__5Cdg", "eleoykpHfgI", "Yomg_GRNAYc"]);
 
   document.addEventListener("click", (event) => {
     const button = event.target.closest?.("button[data-load-video]");
@@ -23,3 +23,4 @@
     document.dispatchEvent(new CustomEvent("mosestechfix:video-load", { detail: { videoId } }));
   });
 })();
+
