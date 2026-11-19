@@ -1,0 +1,68 @@
+.training-rates {
+  margin: 0;
+}
+
+.training-rates > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .25rem 1.25rem;
+  padding: .85rem 0;
+  border-bottom: 1px solid currentColor;
+  border-color: color-mix(in srgb, currentColor 22%, transparent);
+}
+
+.training-rates dt {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.training-rates dd {
+  margin: 0;
+  font-size: 1.12rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.training .training-rates {
+  color: #e5f5fa;
+}
+
+.training .training-rates dd {
+  color: #78e6f0;
+}
+
+.card .training-rates > div {
+  display: grid;
+  justify-content: start;
+  gap: .15rem;
+  padding: .55rem 0;
+}
+
+.card .training-rates dd {
+  color: #096a7a;
+}
+
+#course-fees .training-fee {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+#course-fees .training-fee > * {
+  margin: 0;
+}
+
+#course-fees .training-fee .button {
+  margin-top: auto;
+}
+
+@media (max-width: 26rem) {
+  .training .training-rates > div {
+    display: grid;
+    gap: .15rem;
+  }
+}
