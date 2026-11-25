@@ -54,3 +54,17 @@ Use the public landing page `/website-development?utm_source=CHANNEL&utm_medium=
 For each actual enquiry, record its campaign/source, business type, contact date, quotation amount, stage, agreed value, payment received and follow-up date in the private booking tracker. Count a paid client once and record cash received separately from the total quoted or agreed value. Never put client contact information in public source files or analytics events.
 
 On 6 November 2026 the owner cancelled the proposed paid test and instructed free promotion only. The approved advertising budget is UGX 0. No paid campaign was created, launched or funded as part of this work. Do not create or enable paid ads. Continue using the homepage offer, Google Business Profile updates, organic TikTok and YouTube videos, free Facebook posts when account access is available, and WhatsApp Status graphics. Track actual enquiries, quotations, agreed work and customer payments without treating views or clicks as sales.
+
+## MosesTech AI first month
+
+Use the existing GA4 property (G-KG6CEP3WVG) and the Total users metric by event name. The launch reporting period is 25 November through 24 December 2026, inclusive, using Kampala dates.
+
+| Event | What to count |
+| --- | --- |
+| `ai_workspace_visit` | Visitors who opened the AI workspace. |
+| `ai_first_answer` | Visitors who received a successful first reply on this browser. Retries, errors and empty replies are excluded. |
+| `ai_return_visit` | Visitors who reopened the workspace on a later Kampala calendar date. Use Total users across the whole period to avoid adding repeat days together. |
+| `ai_website_quote_click` | Visitors who followed the quote button from a relevant answer. |
+| `ai_website_quote_handoff` | Visitors who prepared the project brief for WhatsApp or email after following the quote button. |
+
+For received website enquiries, count distinct senders whose inbound email has the subject “Website quote from MosesTech AI” or whose WhatsApp/project brief includes “Enquiry source: mosestech_ai”. Record those in the existing private enquiries and bookings tracker with source `mosestech_ai`. Deduplicate people who use both channels and exclude test messages. Report any channel with unavailable records as unverified. The site can measure a draft opening, while receipt is visible in the inbox. Browser-based counts exclude privacy opt-outs and can count a person on two devices twice.

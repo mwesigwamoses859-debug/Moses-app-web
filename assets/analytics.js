@@ -115,8 +115,13 @@
 
   document.addEventListener("submit", (event) => {
     if (event.target.matches?.("[data-whatsapp-form]") && event.target.checkValidity()) {
-      // The form prepares a message; it cannot confirm that WhatsApp sent it.
-      track("service_enquiry_handoff", { method: "WhatsApp form" });
+      // A prepared draft becomes a received enquiry only after the visitor sends it.
+      const method = event.submitter?.value === "email" ? "Email form" : "WhatsApp form";
+      track("service_enquiry_handoff", { method });
+      if (event.target.id === "website-project-brief" &&
+          new URL(window.location.href).searchParams.get("utm_source") === "mosestech_ai") {
+        track("ai_website_quote_handoff", { method });
+      }
     }
   }, true);
 
